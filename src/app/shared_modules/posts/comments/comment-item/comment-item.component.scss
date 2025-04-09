@@ -1,0 +1,76 @@
+@import "src/assets/scss/components/buttons";
+
+.comment-wrapper {
+  padding: 2px 7px;
+}
+
+.profile-image-avatar {
+  width: 32px;
+  height: 32px;
+}
+
+.comment-details {
+  position: relative;
+  line-height: 1.4em;
+  padding: 7px;
+  border-radius: 20px;
+  background-color: rgba(215, 220, 221, 0.411);
+
+  .total-likes {
+    z-index: 1;
+    position: absolute;
+    margin-left: 5px;
+    right: 0;
+    bottom: -19px;
+    background-color: white;
+    padding: 3px 5px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    user-select: none;
+    font-size: 11px;
+
+    .mat-icon {
+      font-size: 15px;
+      height: 17px;
+      width: 15px;
+      color: red;
+    }
+  }
+
+  &,
+  .mat-link {
+    font-size: 13px !important;
+  }
+}
+
+.comment-text {
+  margin-left: 4px;
+  display: inline-block;
+  min-width: 40px;
+}
+
+.menu-wrapper {
+  ::ng-deep .mat-icon-button {
+    @include icon-button-size(26px, 20px);
+  }
+}
+
+.comment {
+  width: 100%;
+
+  .mat-icon-button {
+    @include icon-button-size(30px, 16px);
+  }
+
+  .mat-flat-button {
+    font-size: 12px;
+    padding: 2px;
+    min-width: 50px;
+    line-height: 25px;
+  }
+}
+
+.comment-input-wrapper {
+  padding: 2px 7px;
+}

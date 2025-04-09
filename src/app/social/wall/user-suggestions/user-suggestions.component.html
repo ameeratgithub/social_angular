@@ -1,0 +1,16 @@
+<mat-card class="mat-elevation-z0">
+  <mat-card-header>
+    <div fxLayout="row" class="full-width" fxLayoutAlign="space-between center">
+      <div class="mat-body mat-t-teal">Suggestions</div>
+      <button mat-button (click)="openUsersDialog()">See All</button>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <component-loader [loading]="loaderService.loading" [data]="suggestedUsers">
+      <ng-template>
+        <users-list [users]="suggestedUsers"></users-list>
+      </ng-template>
+      <ng-container error>No suggestion available</ng-container>
+    </component-loader>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,20 @@
+<div class="mat-typography">
+  <div fxLayout="row" class="modal-header" fxLayoutAlign="space-between center">
+    <h3 class="modal-title no-block-margin">{{header}} </h3>
+    <button mat-icon-button disableRipple color="t-teal" mat-dialog-close="true">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div>
+  <ng-container *ngIf="loading;else content">
+    <app-spinner diameter="30"></app-spinner>
+  </ng-container>
+</div>
+<ng-template #content>
+  <mat-dialog-content>
+    <ng-content></ng-content>
+  </mat-dialog-content>
+  <div *ngIf="actions" mat-dialog-actions fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+    <button mat-button mat-dialog-close="true">{{buttons?.no || 'Cancel'}}</button>
+    <button mat-flat-button color="primary" (click)="save()">{{buttons?.yes || 'Save'}}</button>
+  </div>
+</ng-template>

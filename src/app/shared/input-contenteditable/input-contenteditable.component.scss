@@ -1,0 +1,20 @@
+.input-content {
+  outline: none;
+  padding-bottom: 5px;
+  &:empty {
+    &::before {
+      font-size: 16px;
+      cursor: text;
+      content: attr(placeholder);
+      color: rgba(80, 82, 82, 0.699);
+    }
+    &:focus::before {
+      content: "";
+    }
+  }
+
+  ::ng-deep .post-emoji {
+    margin-right: 2px;
+    vertical-align: middle;
+  }
+}

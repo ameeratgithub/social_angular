@@ -1,0 +1,18 @@
+<div class="gallery-container">
+  <button [style.visibility]="currentIndex>0?'visible':'hidden'" class="left" (click)="goBack()" mat-icon-button color="cyan-l4">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+
+  <ng-container [ngSwitch]="currentMedia.type">
+    <div class="media-container">
+      <img *ngSwitchCase="'image'" mat-card-image [src]="currentMedia.url" />
+      <mat-video *ngSwitchCase="'video'" mat-card-image [autoplay]="false" [keyboard]="false" [preload]="false" color="accent">
+        <source matVideoSource [src]="currentMedia.url" type="video/mp4;ogg;webm" />
+      </mat-video>
+    </div>
+  </ng-container>
+
+  <button *ngIf="currentIndex<list.length-1" class="right" (click)="goForward()" mat-icon-button color="cyan-l4">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>

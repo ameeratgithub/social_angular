@@ -1,0 +1,23 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" opened>
+    <mat-list>
+      <mat-list-item *ngFor="let action of actions">
+        <button mat-button [class.active]="action.active" (click)="changeAction(action)">
+          {{action.text}}
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <ng-container [ngSwitch]="active">
+      <change-profile-picture *ngSwitchCase="'pp'"></change-profile-picture>
+      <edit-general-info *ngSwitchCase="'gi'"></edit-general-info>
+      <change-password *ngSwitchCase="'cp'"></change-password>
+      <edit-privacy-setting *ngSwitchCase="'p'"></edit-privacy-setting>
+      <edit-notifications-setting *ngSwitchCase="'n'"></edit-notifications-setting>
+      <edit-social-setting *ngSwitchCase="'so'"></edit-social-setting>
+      <edit-blog-setting *ngSwitchCase="'b'"></edit-blog-setting>
+      <edit-study-setting *ngSwitchCase="'st'"></edit-study-setting>
+    </ng-container>
+  </mat-drawer-content>
+</mat-drawer-container>

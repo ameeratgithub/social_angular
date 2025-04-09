@@ -1,0 +1,19 @@
+<mat-card [style.width]="cardWidth">
+  <div class="header" fxLayout="row" [fxLayoutAlign]="flexLayoutAlign +' center'">
+    <div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between center" *ngIf="expanded()">
+      <h4 class="no-block-margin">Section Discussion</h4>
+      <menu-wrapper icon="settings" color="t-blue">
+        <button mat-menu-item>Mute</button>
+      </menu-wrapper>
+    </div>
+    <button mat-icon-button color="t-blue" (click)="toggleBox()">
+      <mat-icon>{{cardHeaderIcon}}</mat-icon>
+    </button>
+  </div>
+  <mat-card-content class="section-chat" [style.height.px]="cardContentHeight">
+    <div class="messages">
+      <message-box-content></message-box-content>
+    </div>
+    <message-box-action></message-box-action>
+  </mat-card-content>
+</mat-card>

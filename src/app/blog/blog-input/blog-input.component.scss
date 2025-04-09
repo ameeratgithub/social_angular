@@ -1,0 +1,24 @@
+form {
+
+  .mat-form-field,
+  tinymce {
+    width: 50%;
+  }
+}
+
+::ng-deep tinymce {
+  .mce-container:not(.mce-btn-group) {
+    border-width: 0 !important;
+    box-shadow: none !important;
+    font-family: 'Roboto', sans-serif !important;
+
+    *:not(.mce-ico) {
+      font-family: 'Roboto', sans-serif !important;
+    }
+  }
+  .mce-container.mce-edit-area {
+    border-bottom: 1px solid rgba(0, 0, 0, .42) !important;
+  }
+}
+
+

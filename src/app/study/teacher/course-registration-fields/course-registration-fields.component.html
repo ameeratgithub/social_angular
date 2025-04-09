@@ -1,0 +1,17 @@
+<div fxLayout="column" fxLayoutAlign="start start" class="fields-container">
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width">
+    <h4 class="no-margin">Class {{number}}</h4>
+    <button mat-icon-button color="t-teal-l2" (click)="remove(number)">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div>
+  <university-autocomplete-field></university-autocomplete-field>
+  <campus-select-field></campus-select-field>
+  <timing-select-field></timing-select-field>
+  <program-select-field></program-select-field>
+  <department-select-field></department-select-field>
+  <session-select-field></session-select-field>
+  <section-select-field></section-select-field>
+  <semester-select-field></semester-select-field>
+  <course-select-field></course-select-field>
+</div>

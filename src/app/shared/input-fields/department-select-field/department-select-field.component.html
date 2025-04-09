@@ -1,0 +1,18 @@
+<div fxLayoutAlign="start center">
+  <mat-form-field>
+    <mat-label>Department</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let d of departments" [value]="d.name">{{d.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-icon-button #tooltip="matTooltip"
+    matTooltip="Pick the department(Computer Science/ Mathematics etc) for this class" (click)="tooltip.toggle()"
+    color="t-teal-l2">
+    <mat-icon>help_outline</mat-icon>
+  </button>
+  <menu-wrapper icon="more_horiz" color="t-teal-l2">
+    <button mat-menu-item (click)="openAddDialog()">Add</button>
+    <button mat-menu-item (click)="openEditDialog()">Edit</button>
+    <button mat-menu-item (click)="confirmDelete()">Delete</button>
+  </menu-wrapper>
+</div>

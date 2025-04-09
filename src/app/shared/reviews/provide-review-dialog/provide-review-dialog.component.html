@@ -1,0 +1,15 @@
+<app-dialog header="Give review" actions="true">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <button mat-icon-button color="t-orange" *ngFor="let r of ratingArr;index as i" (click)="onClick(i+1)"
+      disableRipple>
+      <mat-icon>
+        {{showIcon(i)}}
+      </mat-icon>
+    </button>
+  </div>
+  <mat-form-field class="full-width">
+    <textarea matInput cdkTextareaAutosize cdkAutosizeMaxRows="10" cdkAutosizeMinRows="2"
+     placeholder="Tell others about your experience" value="">
+    </textarea>
+  </mat-form-field>
+</app-dialog>

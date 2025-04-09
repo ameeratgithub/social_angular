@@ -1,0 +1,22 @@
+<ng-container>
+  <ng-container *ngIf="loading; else content">
+    <div fxLayout="row" fxLayoutAlign="center center" [style.height.px]="height || 'auto'" class="full-width">
+      <app-spinner diameter="20"></app-spinner>
+      <!-- <h4 class="mat-t-teal-l2">Loading...</h4> -->
+    </div>
+  </ng-container>
+  <ng-template #content>
+    <ng-container *ngIf="shouldRender(data); else noItem">
+      <ng-container *ngTemplateOutlet="contentRef"></ng-container>
+    </ng-container>
+  </ng-template>
+  <ng-template #noItem>
+    <div fxLayout="row" fxLayoutAlign="center center" [style.height.px]="height || 'auto'" class="full-width">
+      <error-info>
+        <h4 class="no-margin">
+          <ng-content select='[error]'></ng-content>
+        </h4>
+      </error-info>
+    </div>
+  </ng-template>
+</ng-container>

@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-content>
+    <mat-list>
+      <h2 mat-subheader>Explore</h2>
+      <mat-list-item>
+        <a class="mat-link" routerLink="/blog/questions" [queryParams]="{area:'university',id:1}">
+          University's Questions
+        </a>
+      </mat-list-item>
+      <mat-list-item>
+        <a class="mat-link" routerLink="/blog/questions" [queryParams]="{area:'campus',id:1}">
+          Campus's Questions
+        </a>
+      </mat-list-item>
+      <mat-list-item>
+        <a class="mat-link" routerLink="/blog/questions" [queryParams]="{area:'department',id:1}">
+          Department's Questions
+        </a>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

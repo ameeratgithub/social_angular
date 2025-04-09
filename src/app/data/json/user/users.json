@@ -1,0 +1,49 @@
+[{
+    "id": 1,
+    "firstName": "Ameer",
+    "lastName": "Hamza",
+    "email": "emailofameer@gmail.com",
+    "gender": "male",
+    "image": "assets/images/img-1.jpg"
+  },
+  {
+    "id": 2,
+    "firstName": "Usama",
+    "lastName": "Azad",
+    "email": "emailofusama@gmail.com",
+    "gender": "male",
+    "image": "assets/images/img-2.jpg"
+  },
+  {
+    "id": 11,
+    "firstName": "First",
+    "lastName": "Female",
+    "email": "emailoffirst@gmail.com",
+    "gender": "female",
+    "image": "assets/images/img-3.jpg"
+  },
+  {
+    "id": 12,
+    "firstName": "Yasir",
+    "lastName": "Iqbal",
+    "email": "emailofyasir@gmail.com",
+    "gender": "male",
+    "image": "assets/images/img-4.jpg"
+  },
+  {
+    "id": 21,
+    "firstName": "Second",
+    "lastName": "Female",
+    "email": "emailofsecond@gmail.com",
+    "gender": "female",
+    "image": "assets/images/img-5.jpg"
+  },
+  {
+    "id": 22,
+    "firstName": "Shahbaz",
+    "lastName": "Minhas",
+    "email": "emailofshahbaz@gmail.com",
+    "gender": "male",
+    "image": "assets/images/img-6.jpg "
+  }
+]

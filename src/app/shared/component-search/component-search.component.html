@@ -1,0 +1,33 @@
+<div class="filters-container" [style.width.px]="width||'250'" fxLayout="column" fxLayoutAlign="start start"
+  fxLayoutGap="10px">
+  <div class="full-width" fxLayout="row" fxLayoutAlign="center center">
+    <mat-form-field [fxFlex]="width?(width-30)+'px':'220px'" floatLabel="never">
+      <input matInput #searchInput (keyup.enter)="search(searchInput.value)" placeholder="Search" autocomplete="off">
+      <button mat-button matSuffix (click)="search(searchInput.value)">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div *ngIf="searchData.filterOptions" class="filters-type" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+    <p class="mat-body no-block-margin" fxFlex="55px">Filter: </p>
+    <mat-chip-list>
+      <mat-chip disableRipple [class.selected]="f.selected" *ngFor="let f of searchData.filterOptions" (click)="filterOptionChanged(f)">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="2px">
+          <div>{{f.text}}</div>
+          <mat-icon class="text-icon" *ngIf="f.icon">{{f.icon}}</mat-icon>
+        </div>
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+  <div *ngIf="searchData.sortOptions" class="filters-type" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+    <p class="mat-body no-block-margin" fxFlex="55px">Sort by: </p>
+    <mat-chip-list>
+      <mat-chip [class.selected]="o.selected" (click)="sortOptionChanged(o)" disableRipple *ngFor="let o of searchData.sortOptions">
+        <mat-icon *ngIf="searchData.sortOrder && o.selected" class="sort-arrow">
+          {{o.isAscending?'arrow_drop_up':'arrow_drop_down'}}
+        </mat-icon>
+        <div>{{o.text}}</div>
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+</div>

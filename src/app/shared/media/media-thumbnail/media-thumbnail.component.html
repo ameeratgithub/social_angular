@@ -1,0 +1,10 @@
+<div class="media-container">
+  <div class="gallery-icon-container" *ngIf="type==='album'">
+    <mat-icon>filter_none</mat-icon>
+  </div>
+  <img [src]="image" />
+  <div class="video-icon-container" fxLayout="row" fxLayoutAlign="start center" *ngIf="type==='video'">
+    <mat-icon>play_arrow</mat-icon>
+    <b>34:12</b>
+  </div>
+</div>

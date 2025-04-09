@@ -1,0 +1,65 @@
+[{
+  "id": 1,
+  "name": "Marghazar College",
+  "timings": [{
+      "id": 1,
+      "name": "Morning",
+      "programs": [{
+        "id": 1,
+        "name": "BS"
+      }, {
+        "id": 2,
+        "name": "MS"
+      }, {
+        "id": 3,
+        "name": "PhD"
+      }]
+    },
+    {
+      "id": 2,
+      "name": "Evening",
+      "programs": [{
+        "id": 4,
+        "name": "BS"
+      }]
+    }
+  ]
+}, {
+  "id": 2,
+  "name": "Hafiz Hayat Campus",
+  "abbreviation": "HHC",
+  "timings": [{
+      "id": 3,
+      "name": "Morning",
+      "programs": [{
+        "id": 5,
+        "name": "BS"
+      }, {
+        "id": 6,
+        "name": "MS"
+      }, {
+        "id": 7,
+        "name": "PhD"
+      }]
+    }
+  ]
+}, {
+  "id": 3,
+  "name": "Military College of Signals",
+  "abbreviation": "MCS",
+  "timings": [{
+      "id": 4,
+      "name": "Morning",
+      "programs": [{
+        "id": 8,
+        "name": "BS"
+      }, {
+        "id": 9,
+        "name": "MS"
+      }, {
+        "id": 10,
+        "name": "PhD"
+      }]
+    }
+  ]
+}]

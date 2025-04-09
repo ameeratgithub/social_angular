@@ -1,0 +1,13 @@
+@mixin no-card-title-margin {
+  .mat-card-header {
+    .mat-card-title {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@mixin no-card-padding() {
+  .mat-card {
+    padding: 0;
+  }
+}

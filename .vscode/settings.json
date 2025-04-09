@@ -1,0 +1,11 @@
+{
+    "files.exclude": {
+        ".md": true,
+        ".vscode": true,
+        "deffered": true,
+        "dist": true,
+        "e2e": true,
+        "node_modules": true,
+        "src/environments": true
+    }
+}

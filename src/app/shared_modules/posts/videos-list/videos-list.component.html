@@ -1,0 +1,19 @@
+<page-layout-wrapper>
+  <ng-container header-action>
+    <app-popover [position]="popoverPosition" icon="tune" close="both" arrow="top right">
+      <component-search [searchData]="searchData" width="300" (changed)="handleSearchInput($event)">
+      </component-search>
+    </app-popover>
+  </ng-container>
+  <ng-container content-1>
+    <mat-card>
+      <mat-card-content>
+        <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+          <div *ngFor="let vp of videoPosts">
+            <videos-list-item [post]="vp"></videos-list-item>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</page-layout-wrapper>

@@ -1,0 +1,19 @@
+.info-wrapper {
+  margin-bottom: 20px;
+
+  width: 500px;
+
+  ::ng-deep {
+    &>div:not(.actions) {
+      padding-left: 40px;
+    }
+
+    .mat-form-field {
+      flex-basis: 50%;
+    }
+
+    .actions {
+      margin-top: 10px;
+    }
+  }
+}

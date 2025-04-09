@@ -1,0 +1,9 @@
+@import 'src/assets/scss/components/buttons';
+
+.fields-container {
+  ::ng-deep {
+    .mat-icon-button {
+      @include icon-button-size(23px, 16px);
+    }
+  }
+}

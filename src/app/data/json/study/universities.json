@@ -1,0 +1,44 @@
+ [{
+   "id": 1,
+   "name": "University of Gujrat",
+   "location": "Gujrat",
+   "abbreviation": "UOG",
+   "logo": "assets/universities/1/logo.png",
+   "campuses": [{
+     "id": 1,
+     "name": "Marghazar College"
+   }, {
+     "id": 2,
+     "name": "Hafiz Hayat Campus",
+     "abbreviation": "HHC"
+   }]
+ }, {
+   "id": 2,
+   "name": "University of Punjab",
+   "location": "Lahore",
+   "abbreviation": "PU",
+   "logo": "assets/universities/2/logo.jpg"
+ }, {
+   "id": 3,
+   "name": "University of Engineering and Technology",
+   "location": "Lahore",
+   "abbreviation": "UET",
+   "logo": "assets/universities/3/logo.png"
+ }, {
+   "id": 4,
+   "name": "National University of Science and Technology",
+   "location": "Islamabad",
+   "abbreviation": "NUST",
+   "logo": "assets/universities/4/logo.png",
+   "campuses": [{
+     "id": 3,
+     "name": "Military College of Signals",
+     "abbreviation": "MCS"
+   }]
+ }, {
+   "id": 5,
+   "name": "University of Peshawar",
+   "location": "Peshawar",
+   "abbreviation": "UOP",
+   "logo": "assets/universities/5/logo.jpg"
+ }]

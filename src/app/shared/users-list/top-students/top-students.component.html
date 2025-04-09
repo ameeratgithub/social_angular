@@ -1,0 +1,25 @@
+<mat-card>
+  <h4>Top Students</h4>
+  <component-loader [loading]="loaderService.loading" [data]="students">
+    <ng-template>
+      <div class="full-width container" fxLayout="row" fxLayoutAlign="space-around center">
+        <div *ngFor="let s of students" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <a [routerLink]="'/users/'+s.id"><img class="profile-image-avatar" [src]="s.image" /></a>
+          <div fxLayout="column" fxLayoutAlign="start start">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="3px">
+              <a [routerLink]="'/user/profile/'+s.id" class="mat-link">{{s.fullName}}</a>
+              <mat-icon [matTooltip]="s.gradeBadge.description" class="grade-badge" [color]="getBadgeClass(s.gradeBadge)">
+                school
+              </mat-icon>
+            </div>
+            <p class="mat-t-teal no-margin">{{s.rollNumber}}</p>
+            <p class="mat-t-teal-l2 no-margin">CGPA {{s.CGPA}}</p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-container error>
+      No topper found
+    </ng-container>
+  </component-loader>
+</mat-card>

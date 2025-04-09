@@ -1,0 +1,15 @@
+<div>
+  <h4>Active Registered Classes:-</h4>
+  <div class="active-classes-container" fxLayout="column" fxLayoutGap="10px">
+    <div class="active-class-container" *ngFor="let _items of itemsContainer" fxLayout="row wrap"
+      fxLayoutAlign="start center">
+      <div fxLayout="row" fxLayoutAlign="start center" *ngFor="let item of _items;let i=index">
+        <small>{{item.name || item.number}}</small>
+        <mat-icon *ngIf="i <(items.length-1)">chevron_right</mat-icon>
+      </div>
+      <button mat-icon-button color="t-teal-l2" fxFlexOffset="15px" (click)="delete(_items)">
+        <mat-icon>delete_forever</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>

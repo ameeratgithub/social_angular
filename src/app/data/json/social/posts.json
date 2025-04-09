@@ -1,0 +1,243 @@
+[{
+    "id": "1",
+    "date": "1557952956343",
+    "totalLikes": 1300,
+    "totalComments": 20,
+    "hasReactions": true,
+    "text": "This is text from post",
+    "hasMedia": true,
+    "media": {
+      "id": "123",
+      "type": "image",
+      "url": "assets/images/fb-4.jpg"
+    },
+    "uploader": {
+      "id": "2",
+      "fullName": "Ameer Hamza",
+      "image": "assets/images/fb-1.jpg"
+    }
+  },
+  {
+    "id": "2",
+    "date": "1455952956343",
+    "totalLikes": 30,
+    "totalComments": 4,
+    "hasReactions": true,
+    "totalShares": 10,
+    "hasMedia": true,
+    "album": {
+      "type": "mix",
+      "items": [{
+          "id": "123",
+          "type": "image",
+          "url": "assets/images/fb-1.jpg"
+        },
+        {
+          "id": "123",
+          "type": "video",
+          "url": "assets/videos/v-1.mp4",
+          "cover": "assets/images/fb-4.jpg"
+        },
+        {
+          "id": "123",
+          "type": "image",
+          "url": "assets/images/fb-3.jpg"
+        },
+        {
+          "id": "123",
+          "type": "video",
+          "url": "assets/videos/v-4.mp4",
+          "cover": "assets/images/fb-1.jpg"
+        },
+        {
+          "id": "123",
+          "type": "image",
+          "url": "assets/images/fb-5.jpg"
+        }
+      ]
+    },
+    "uploader": {
+      "id": "2",
+      "fullName": "Usama Azad",
+      "image": "assets/images/fb-2.jpg"
+    }
+  },
+  {
+    "id": "3",
+    "date": "1556953699324",
+    "totalLikes": 120,
+    "totalComments": 74,
+    "hasReactions": true,
+    "totalShares": 10,
+    "text": "This is text from post",
+    "uploader": {
+      "id": "2",
+      "fullName": "Shahbaz Shah",
+      "image": "assets/images/fb-8.jpg"
+    }
+  },
+  {
+    "id": "4",
+    "date": "1553933595324",
+    "totalComments": 13,
+    "totalShares": 10,
+    "hasReactions": true,
+    "hasMedia": true,
+    "text":"This is text of video I uploaded earlier",
+    "media": {
+      "id": "123",
+      "type": "video",
+      "url": "assets/videos/v-3.mp4",
+      "cover": "assets/images/fb-7.jpg"
+    },
+    "uploader": {
+      "id": "2",
+      "fullName": "Tayyab Javaid",
+      "image": "assets/images/fb-8.jpg"
+    }
+  },
+  {
+    "id": "5",
+    "date": "1557953670678",
+    "totalLikes": 150,
+    "totalShares": 10,
+    "hasReactions": true,
+    "hasMedia": true,
+    "text":"This is text of video I uploaded earlier",
+    "media": {
+      "id": "123",
+      "type": "video",
+      "url": "assets/videos/v-5.mp4",
+      "cover": "assets/images/fb-5.jpg"
+    },
+    "uploader": {
+      "id": "2",
+      "fullName": "Luqman Yasir",
+      "image": "assets/images/fb-8.jpg"
+    }
+  },
+  {
+    "id": "6",
+    "date": "1357954670678",
+    "totalLikes": 650,
+    "totalComments": 77,
+    "hasReactions": true,
+    "text": "This is text from post",
+    "hasMedia": true,
+    "media": {
+      "id": "123",
+      "type": "image",
+      "url": "assets/images/fb-7.jpg"
+    },
+    "uploader": {
+      "id": "2",
+      "fullName": "Muhammad Waqas",
+      "image": "assets/images/fb-6.jpg"
+    }
+  },
+  {
+    "id": "7",
+    "date": "1557653699524",
+    "totalComments": 21,
+    "totalShares": 10,
+    "hasReactions": true,
+    "hasMedia": true,
+    "album": {
+      "type": "mix",
+      "items": [{
+          "id": "123",
+          "type": "image",
+          "url": "assets/images/fb-1.jpg"
+        },
+        {
+          "id": "123",
+          "type": "video",
+          "url": "assets/videos/v-1.mp4",
+          "cover": "assets/images/fb-4.jpg"
+        },
+        {
+          "id": "123",
+          "type": "image",
+          "url": "assets/images/fb-3.jpg"
+        },
+        {
+          "id": "123",
+          "type": "video",
+          "url": "assets/videos/v-4.mp4",
+          "cover": "assets/images/fb-1.jpg"
+        },
+        {
+          "id": "123",
+          "type": "image",
+          "url": "assets/images/fb-5.jpg"
+        }
+      ]
+    },
+    "uploader": {
+      "id": "2",
+      "fullName": "Ali Raza",
+      "image": "assets/images/fb-7.jpg"
+    }
+  },
+  {
+    "id": "8",
+    "date": "1357953570178",
+    "hasMedia": true,
+
+    "album": {
+      "type": "images",
+      "items": [{
+          "id": "123",
+          "type": "image",
+          "url": "assets/images/fb-1.jpg"
+        },
+        {
+          "id": "123",
+          "type": "image",
+          "url": "assets/images/fb-3.jpg"
+        },
+        {
+          "id": "123",
+          "type": "image",
+          "url": "assets/images/fb-5.jpg"
+        }
+      ]
+    },
+    "uploader": {
+      "id": "2",
+      "fullName": "Abubakar Nawaz",
+      "image": "assets/images/fb-4.jpg"
+    }
+  },
+  {
+    "id": "7",
+    "date": "1557653699524",
+    "totalComments": 21,
+    "totalShares": 10,
+    "hasReactions": true,
+    "hasMedia": true,
+    "text":"This is text of video album I uploaded earlier",
+    "album": {
+      "type": "videos",
+      "items": [{
+          "id": "123",
+          "type": "video",
+          "url": "assets/videos/v-1.mp4",
+          "cover": "assets/images/fb-4.jpg"
+        },
+
+        {
+          "id": "123",
+          "type": "video",
+          "url": "assets/videos/v-4.mp4",
+          "cover": "assets/images/fb-1.jpg"
+        }
+      ]
+    },
+    "uploader": {
+      "id": "2",
+      "fullName": "Ali Raza",
+      "image": "assets/images/fb-7.jpg"
+    }
+  }
+]

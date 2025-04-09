@@ -1,0 +1,38 @@
+@import "src/assets/scss/components/buttons";
+
+.comment-wrapper {
+  font-size: 13px;
+  line-height: 1.45em;
+
+  vote-vertical ::ng-deep {
+    margin-top: 10px;
+    span {
+      font-size: 11px;
+    }
+
+    .mat-icon-button {
+      @include icon-button-size(16px, 13px);
+    }
+  }
+}
+
+.comment {
+  padding: 10px 0;
+
+  .mat-link {
+    font-size: inherit;
+  }
+}
+
+.mat-divider.mat-divider-horizontal {
+  width: 70%;
+  left: 15%;
+}
+
+.menu-wrapper {
+  margin-top: 10px;
+
+  ::ng-deep .mat-icon-button {
+    @include icon-button-size(24px, 20px);
+  }
+}

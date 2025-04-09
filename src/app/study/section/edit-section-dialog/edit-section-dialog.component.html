@@ -1,0 +1,64 @@
+<app-dialog header="Edit section" actions="true" [loading]="loading">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="80">
+      <mat-form-field class="full-width">
+        <input #sectionNameInput matInput placeholder="New section name" value="Section A" />
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput [formControl]="newCrControl" placeholder="Choose new CR" [matAutocomplete]="crAuto" value="Ameer Hamza" />
+        <mat-autocomplete #crAuto="matAutocomplete">
+          <mat-option *ngFor="let m of filteredMembers | async" [value]="m.fullName">
+            <img class="autocomplete-avatar profile-image-avatar" aria-hidden [src]="m.image" height="25">
+            <span>{{m.fullName}}</span>
+          </mat-option>
+        </mat-autocomplete>
+        <mat-hint>Note: If you're CR, choosing another person as CR will remove you as CR</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput [formControl]="newGrControl" placeholder="Choose new GR" [matAutocomplete]="grAuto" value="Ameer Hamza" />
+        <mat-autocomplete #grAuto="matAutocomplete">
+          <mat-option *ngFor="let m of filteredMembers | async" [value]="m.fullName">
+            <img class="autocomplete-avatar profile-image-avatar" aria-hidden [src]="m.image" height="25">
+            <span>{{m.fullName}}</span>
+          </mat-option>
+        </mat-autocomplete>
+        <mat-hint>Note: If you're GR, choosing another person as GR will remove you as GR</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-chip-list #studentsChipList>
+          <mat-chip *ngFor="let m of studentsToAdd" removable="true" (removed)="removeMemberChip(m)">
+            <img [src]='m.image'>{{m.fullName.split(' ')[0]}}
+            <mat-icon matChipRemove>cancel</mat-icon>
+          </mat-chip>
+          <input placeholder="Add student" #newStudentInput [formControl]="newMemberControl" [matAutocomplete]="newMemberAuto"
+            [matChipInputFor]="studentsChipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            (matChipInputTokenEnd)="addMemberChip($event)">
+        </mat-chip-list>
+        <mat-autocomplete #newMemberAuto="matAutocomplete" (optionSelected)="newStudentSelected($event)">
+          <mat-option *ngFor="let m of filteredMembers | async" [value]="m">
+            <img class="autocomplete-avatar profile-image-avatar" [src]="m.image" height="25">
+            <span>{{m.fullName}}</span>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <!-- <button mat-flat-button (click)="openConfirmationDialog()">Move to new semester</button> -->
+      <div style="margin-top:20px">
+        <mat-selection-list #membersList>
+          <mat-hint class="mat-small">
+            These are your class fellows. If you uncheck any student, and then click save
+            button, this will kick that student out of section.
+          </mat-hint>
+          <mat-list-option selected *ngFor="let m of sectionInfo?.members">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+              <img class="profile-image-avatar" [src]="m.image" />
+              <span>
+                {{m.fullName}}
+              </span>
+            </div>
+          </mat-list-option>
+        </mat-selection-list>
+      </div>
+    </div>
+  </div>
+</app-dialog>

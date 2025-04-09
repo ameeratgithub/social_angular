@@ -1,0 +1,127 @@
+@import "src/assets/scss/components/buttons";
+
+$border-color:rgba(173, 179, 178, 0.6);
+
+.mat-card {
+  padding: 0;
+  border: 1px solid $border-color;
+}
+
+.mat-card-header {
+  float: right;
+  padding: 5px 10px;
+  .mat-icon-button {
+    @include icon-button-size(21px, 15px);
+  }
+}
+
+.arrow:before,
+.arrow:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.arrow:after {
+  border-width: 10px;
+}
+
+.arrow:before {
+  border-width: 11px;
+}
+
+// .arrow.right {
+
+//   &:after,
+//   &:before {
+//     left: 100%;
+//   }
+
+//   &:after {
+//     top: 10px;
+//     border-color: transparent transparent transparent white;
+
+//   }
+
+//   &:before {
+//     top: 9px;
+//     border-color: transparent transparent transparent $border-color;
+//   }
+// }
+
+.arrow.top {
+
+  &:after,
+  &:before {
+    bottom: 100%;
+  }
+
+  &:after {
+    border-color: transparent transparent white transparent;
+  }
+
+  &:before {
+
+    border-color: transparent transparent $border-color transparent;
+  }
+
+  &.right {
+    &::after {
+      right: 10px;
+    }
+
+    &::before {
+      right: 9px;
+    }
+  }
+
+  &.left {
+    &::after {
+      left: 10px;
+    }
+
+    &::before {
+      left: 9px;
+    }
+  }
+
+}
+
+.arrow.bottom {
+
+  &:after,
+  &:before {
+    top: 100%;
+  }
+
+  &:after {
+    border-color: white transparent transparent transparent;
+  }
+
+  &:before {
+    border-color: $border-color transparent transparent transparent;
+  }
+
+  &.right {
+    &::after {
+      right: 26px;
+    }
+
+    &::before {
+      right: 25px;
+    }
+  }
+
+  &.left {
+    &::after {
+      left: 10px;
+    }
+
+    &::before {
+      left: 9px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<div>
+  <mat-chip-list>
+    <mat-chip disableRipple [class.selected]="f.selected" *ngFor="let f of filters" (click)="filterOptionChanged(f)">
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="2px">
+        <div>{{f.text}}</div>
+        <mat-icon class="text-icon" *ngIf="f.icon">{{f.icon}}</mat-icon>
+      </div>
+    </mat-chip>
+  </mat-chip-list>
+  <div class="reviews">
+    <review-item></review-item>
+    <review-item></review-item>
+    <review-item></review-item>
+    <review-item></review-item>
+    <review-item></review-item>
+  </div>
+</div>

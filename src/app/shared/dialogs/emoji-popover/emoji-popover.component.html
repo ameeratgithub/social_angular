@@ -1,0 +1,22 @@
+<app-popover [position]="position" [arrow]="arrow" close="backdrop" icon="sentiment_satisfied_alt">
+  <div class="popover-container">
+    <div class="category-container">
+      <span *ngFor="let c of categories" (click)="selectCategory(c)" class="category-icon-container"
+        [class.selected]="c.selected" [matTooltip]="c.title">
+        <img class="emoji" [src]="getCategoryPath(c)" />
+      </span>
+    </div>
+    <component-loader [loading]="loading" height="270" [data]="emojis">
+      <ng-template>
+        <div class="emojis-container" fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="10px">
+          <span fxFlex="32px" class="emoji-container" *ngFor="let e of emojis" (click)="appendEmoji(e)">
+            <img class="emoji" *ngIf="e" [src]="getEmojiPath(e)"  />
+          </span>
+        </div>
+      </ng-template>
+      <ng-container error>
+        Empty
+      </ng-container>
+    </component-loader>
+  </div>
+</app-popover>

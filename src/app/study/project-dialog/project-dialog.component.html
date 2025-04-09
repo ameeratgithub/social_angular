@@ -1,0 +1,53 @@
+<app-dialog header="Add project" actions="true">
+  <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="10px" class="project-info">
+    <mat-form-field>
+      <input matInput placeholder="Name" />
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput cdkTextareaAutosize cdkAutosizeMaxRows="5" placeholder="Description" value="">
+
+      </textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-chip-list #tagsChipList>
+        <mat-chip *ngFor="let t of tags" removable="true" (removed)="removeMemberChip(t)">
+          {{t}}
+          <mat-icon matChipRemove>cancel</mat-icon>
+        </mat-chip>
+        <input placeholder="Choose tags" #tagInput [formControl]="tagControl" [matAutocomplete]="tagAuto"
+          [matChipInputFor]="tagsChipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" (matChipInputTokenEnd)="addTagChip($event)">
+      </mat-chip-list>
+      <mat-autocomplete #tagAuto="matAutocomplete" (optionSelected)="tagSelected($event)">
+        <mat-option *ngFor="let t of filteredTags | async" [value]="t">
+          {{t}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <div>
+      <button mat-stroked-button (click)="imagesInput.click()">Add Images</button>
+      <input type="file" multiple #imagesInput style="display:none" accept="image/*" (change)="handleImages($event.target.files)" />
+      <div fxLayout="row wrap" fxLayoutAlign="start center" class="media-thumbnails">
+        <div *ngFor="let i of images" class="thumbnail-container">
+          <img class="image-thumbnail" *ngIf="i.url" [src]="i.url" />
+          <mat-progress-spinner mode="determinate" diameter="25" value="30"></mat-progress-spinner>
+          <button mat-icon-button disableRipple (click)="removeImage(i)">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button mat-stroked-button (click)="videoInput.click()">Add Videos</button>
+      <input type="file" multiple #videoInput style="display:none" accept="video/*" (change)="handleVideos($event.target.files)" />
+      <div fxLayout="row wrap" fxLayoutAlign="start center" class="media-thumbnails">
+        <div *ngFor="let v of videos" class="thumbnail-container">
+          <img class="image-thumbnail" *ngIf="v.cover?.url" [src]="v.cover.url" />
+          <mat-progress-spinner mode="determinate" diameter="25" value="30"></mat-progress-spinner>
+          <button mat-icon-button disableRipple (click)="removeVideo(v)">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-dialog>

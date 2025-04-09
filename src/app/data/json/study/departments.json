@@ -1,0 +1,48 @@
+[{
+  "id": 1,
+  "name": "Department 1",
+  "batches": [{
+    "id": 11,
+    "name": "Batch 2013",
+    "sections": [{
+      "id": 111,
+      "name": "Section A"
+    }, {
+      "id": 112,
+      "name": "Section B"
+    }, {
+      "id": 113,
+      "name": "Section C"
+    }]
+  }, {
+    "id": 12,
+    "name": "Batch 2014",
+    "sections": [{
+      "id": 114,
+      "name": "Section A"
+    }, {
+      "id": 115,
+      "name": "Section B"
+    }, {
+      "id": 116,
+      "name": "Section C"
+    }]
+  }]
+}, {
+  "id": 2,
+  "name": "Department 2",
+  "batches": [{
+    "id": 12,
+    "name": "Batch 2014",
+    "sections": [{
+      "id": 117,
+      "name": "Section A"
+    }, {
+      "id": 118,
+      "name": "Section B"
+    }, {
+      "id": 119,
+      "name": "Section C"
+    }]
+  }]
+}]

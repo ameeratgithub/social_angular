@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.mat-spinner.default {
+  ::ng-deep circle {
+    stroke: rgb(187, 235, 219);
+  }
+}

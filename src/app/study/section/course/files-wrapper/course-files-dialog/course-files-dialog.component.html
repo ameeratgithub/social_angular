@@ -1,0 +1,32 @@
+<app-dialog [header]="header" actions="true" (dialogSaved)="saveFile()">
+  <div>
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+      <button mat-button (click)="fileInput.click()">
+        Choose files
+      </button>
+      <mat-spinner *ngIf="loading" color="acccent" diameter="20"></mat-spinner>
+      <!-- <mat-error *ngIf="error && !loading">{{error}}</mat-error> -->
+    </div>
+    <div class="file-item" fxLayout="row" fxLayoutAlign="space-between center" *ngFor="let file of files">
+      <span fxFlex="50">{{file.name | truncate:[22]}}</span>
+      <span fxFlex="20">
+        <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+      </span>
+      <div *ngIf="fileType!='lecture'" fxLayout="row" fxLayoutAlign="start center" fxFlex="24">
+        <button mat-icon-button disableRipple (click)="deadlinePicker.open()" matTooltip="Deadline">
+          <mat-icon>today</mat-icon>
+        </button>
+        <span class="mat-small">{{file.deadline | date}}</span>
+        <mat-form-field>
+          <input #deadlineInput matInput [matDatepicker]="deadlinePicker" (dateChange)="file.deadline=deadlineInput.value">
+          <mat-datepicker #deadlinePicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <button mat-icon-button disableRipple fxFlex="5" (click)="removeFile(file)">
+        <mat-icon>clear</mat-icon>
+      </button>
+    </div>
+    <input type="file" [multiple]="action=='add'" #fileInput style="display:none" 
+    (change)="handleFiles($event.target.files)" />
+  </div>
+</app-dialog>

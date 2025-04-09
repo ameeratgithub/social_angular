@@ -1,0 +1,61 @@
+[{
+  "id": 1,
+  "rating": 4,
+  "text": "This is not very good, but you can consider it as good, there are some mistakes.",
+  "reviewer": {
+    "id": 1,
+    "fullName": "Ameer Hamza",
+    "image": "assets/images/img-1.jpg"
+  }
+
+}, {
+  "id": 2,
+  "rating": 3,
+  "text": "This is not very good, but you can consider it as good, there are some mistakes.",
+  "reviewer": {
+    "id": 2,
+    "fullName": "Abdullah Khurram",
+    "image": "assets/images/img-2.jpg"
+  }
+
+}, {
+  "id": 3,
+  "rating": 5,
+  "text": "This is not very good, but you can consider it as good, there are some mistakes.",
+  "reviewer": {
+    "id":3,
+    "fullName": "Abdul Rasheed Azad",
+    "image": "assets/images/img-3.jpg"
+  }
+
+}, {
+  "id": 4,
+  "rating": 5,
+  "text": "This is not very good, but you can consider it as good, there are some mistakes.",
+  "reviewer": {
+    "id": 4,
+    "fullName": "Usama Mehar Azad",
+    "image": "assets/images/img-4.jpg"
+  }
+
+}, {
+  "id": 5,
+  "rating": 5,
+  "text": "This is not very good, but you can consider it as good, there are some mistakes.",
+  "reviewer": {
+    "id": 5,
+    "fullName": "Aleem Raza Bughati",
+    "image": "assets/images/img-5.jpg"
+  }
+
+}, {
+  "id": 6,
+  "rating": 2,
+  "text": "This is not very good, but you can consider it as good, there are some mistakes.",
+  "reviewer": {
+    "id": 6,
+    "fullName": "Muhammad Waqas Mehar",
+    "image": "assets/images/img-6.jpg"
+  }
+
+}]

@@ -1,0 +1,33 @@
+.campus-cover-container {
+  max-width: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+.info>.mat-flat-button {
+  padding: 0;
+  height: auto;
+  line-height: 0;
+}
+
+.campus-wall-cover {
+  max-height: 350px;
+  width: 100%;
+  vertical-align: top;
+  transform: scaleY(1.4);
+}
+
+.campus-details-container {
+  position: absolute;
+  height: 85px;
+  box-sizing: border-box;
+  bottom: 0;
+  padding: 7px 20px;
+  width: 100%;
+  background: linear-gradient(rgba(0, 128, 128, 0.3) 30%, rgba(0, 0, 0, 0.6) 100%);
+
+  &,
+  .info>.mat-flat-button {
+    color: white;
+  }
+}

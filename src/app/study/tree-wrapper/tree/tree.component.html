@@ -1,0 +1,30 @@
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="tree">
+  <mat-tree-node [style.display]="inline?'inline-flex':'flex'" *matTreeNodeDef="let node" matTreeNodeToggle>
+    <li class="mat-tree-node">
+      <a mat-button color="primary" [routerLink]="node.href">{{node.name}}</a>
+    </li>
+  </mat-tree-node>
+  <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+    <li>
+      <div class="mat-tree-node">
+        <button mat-icon-button matTreeNodeToggle>
+          <mat-icon class="mat-icon-rtl-mirror">
+            {{treeControl.isExpanded(node)?'expand_more':'chevron_right'}}
+          </mat-icon>
+        </button>
+        {{node.name}}
+        <div class="actions" *ngIf="node.actions?.length">
+          <a mat-icon-button [matTooltip]="a.text" color="t-blue" *ngFor="let a of node.actions" [routerLink]="a.href"
+          [queryParams]="a.qParams">
+            <mat-icon>
+              {{a.icon}}
+            </mat-icon>
+          </a>
+        </div>
+      </div>
+      <ul [class.tree-invisible]="!treeControl.isExpanded(node)">
+        <ng-container matTreeNodeOutlet></ng-container>
+      </ul>
+    </li>
+  </mat-nested-tree-node>
+</mat-tree>

@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-header>
+    <div fxLayout="row" fxLayoutGap="10px">
+      <div>
+        <img class="profile-image-avatar" [src]="post.uploader.image" />
+      </div>
+      <div>
+        <a href="javascript:;" class="mat-link">{{post.uploader.fullName}}</a>
+        <div class="mat-small mat-t-teal-l2">{{post.date | relativeTime}}</div>
+      </div>
+    </div>
+  </mat-card-header>
+  <mat-card-content fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="space-between start" (click)="openPostPopup()">
+    <div class="post-content">
+      <div>
+        {{post.text?.trim() | truncate:['200']}}
+      </div>
+      <div class="post-reactions full-width">
+        <post-reactions [post]="post"></post-reactions>
+      </div>
+    </div>
+    <div *ngIf="post.hasMedia">
+      <media-thumbnail [type]="thumbnail.type" [image]="thumbnail.url"></media-thumbnail>
+    </div>
+  </mat-card-content>
+</mat-card>

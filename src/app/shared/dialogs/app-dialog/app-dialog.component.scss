@@ -1,0 +1,22 @@
+@import 'src/assets/scss/components/buttons';
+@import 'src/assets/scss/mixins';
+
+::ng-deep {
+  .mat-dialog-container {
+    overflow: hidden;
+    padding-top: 0;
+  }
+
+  .mat-dialog-content {
+    overflow-y: auto;
+    @include custom-scrollbar(7px);
+  }
+}
+
+.modal-header {
+  padding: 15px 0 15px 10px;
+}
+
+.mat-icon-button {
+  @include icon-button-size(16px, 16px);
+}

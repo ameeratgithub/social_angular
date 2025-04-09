@@ -1,0 +1,35 @@
+.mat-card {
+  padding-bottom: 5px;
+}
+
+.mat-card-header {
+  display: initial;
+}
+
+.mat-card-content {
+  cursor: pointer;
+  position: relative
+}
+
+.profile-image-avatar {
+  width: 35px;
+  height: 35px;
+}
+
+media-thumbnail {
+  ::ng-deep img {
+    width: 100px;
+    height: 90px;
+    border-radius: 5px;
+  }
+}
+
+.post-content {
+  width: 100%;
+  min-height: 120px;
+}
+
+.post-reactions {
+  position: absolute;
+  bottom: 0;
+}

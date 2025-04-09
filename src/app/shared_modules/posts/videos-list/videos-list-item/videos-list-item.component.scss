@@ -1,0 +1,59 @@
+.video-cover-container {
+  position: relative;
+  cursor: pointer;
+  .video-icon-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 3px;
+
+    b {
+      font-weight: 500;
+      font-size: 12px;
+    }
+
+    .mat-icon {
+      font-size: 18px;
+      width: 18px;
+      height: 18px;
+      color: white;
+    }
+  }
+
+  .post-reactions {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    bottom: 0;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+
+    ::ng-deep {
+      .post-reactions {
+        color: #d0d5d8;
+      }
+    }
+  }
+
+  media-thumbnail {
+    ::ng-deep img {
+      width: 150px;
+      height: 100px;
+    }
+  }
+
+
+}
+
+.video-details-container {
+  .mat-link {
+    font-size: 14px;
+    overflow: hidden;
+  }
+
+  .extra-link {
+    font-size: 12px;
+  }
+}

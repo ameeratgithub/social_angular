@@ -1,0 +1,25 @@
+<ng-container *ngIf="loading;else content">
+  <app-spinner diameter="30"></app-spinner>
+</ng-container>
+<ng-template #content>
+  <div fxLayout="row" class="page-container" fxLayoutAlign="start start" fxLayoutGap="30px">
+    <div [fxFlex]="leftFlex || '700px'" class="left-flex">
+      <div class="full-width" fxLayout="row" fxLayoutAlign="space-between center">
+        <h3 class="no-margin">{{header}} </h3>
+        <ng-content select="[header-action]"></ng-content>
+      </div>
+      <div class="header-content">
+        <ng-content select="[header-content]"></ng-content>
+      </div>
+      <div>
+        <ng-content select="[content-1]"></ng-content>
+      </div>
+      <div class="content-2">
+        <ng-content select="[content-2]"></ng-content>
+      </div>
+    </div>
+    <div [fxFlex]="rightFlex || ''">
+      <ng-content select="[right-flex]"></ng-content>
+    </div>
+  </div>
+</ng-template>

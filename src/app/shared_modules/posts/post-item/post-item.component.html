@@ -1,0 +1,54 @@
+<mat-card class="mat-elevation-z0">
+  <mat-card-header fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+    <img class="profile-image-avatar poster" [src]="post.uploader.image">
+    <a class="mat-link mat-body" [routerLink]="'/user/profile/'+post.uploader.id">
+      <div>{{post.uploader.fullName}}</div>
+      <div class="mat-small mat-t-teal">{{post.date | relativeTime}}</div>
+    </a>
+    <menu-wrapper icon="more_horiz">
+      <button mat-menu-item>Report</button>
+      <button mat-menu-item>Hide</button>
+    </menu-wrapper>
+  </mat-card-header>
+  <ng-container [ngSwitch]="post.media?.type">
+    <div class="media-container">
+      <img *ngSwitchCase="'image'" mat-card-image [src]="post.media.url" />
+      <mat-video *ngSwitchCase="'video'" mat-card-image [autoplay]="false" [keyboard]="false" [preload]="false" color="accent">
+        <source matVideoSource [src]="post.media.url" type="video/mp4;ogg;webm" />
+      </mat-video>
+    </div>
+  </ng-container>
+  <div class="post-media">
+    <media-gallery *ngIf="post.album" [list]="post.album.items"></media-gallery>
+  </div>
+  <div class="post-text" *ngIf="post.text">
+    {{post.text}}
+  </div>
+  <mat-card-actions>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <button mat-button color="t-teal">
+        <mat-icon>favorite_border</mat-icon>
+      </button>
+      <button mat-button color="t-teal" (click)="showCommentInput()">
+        <mat-icon>chat_bubble_outline</mat-icon>
+      </button>
+      <button mat-button color="t-teal">
+        <mat-icon>share</mat-icon>
+      </button>
+      <button mat-icon-button color="t-teal">
+        <mat-icon>bookmark_border</mat-icon>
+      </button>
+    </div>
+    <div class="post-reactions">
+      <post-reactions [post]="post" (commentsClick)="showComments(!showCommentArea)"></post-reactions>
+    </div>
+    <ng-container *ngIf="showCommentArea">
+      <div class="comments-wrapper">
+        <comment-item *ngFor="let comment of comments" [comment]="comment"></comment-item>
+      </div>
+      <div class="comment-input-wrapper">
+        <comment-input></comment-input>
+      </div>
+    </ng-container>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,27 @@
+<page-layout-wrapper [header]="header" leftFlex="100">
+  <ng-container header-action>
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+      <button mat-icon-button *ngIf="isUniversityLink" color="primary" (click)="openDialog()">
+        <mat-icon>add</mat-icon>
+      </button>
+      <a mat-icon-button *ngIf="!isUniversityLink" routerLink="/study/library"
+        [queryParams]="{area:'university',id:1}">
+        <img class="profile-image-avatar" src="assets/universities/1/logo.png" />
+      </a>
+      <app-popover [position]="popoverPosition" arrow="top right" icon="tune" close="both">
+        <component-search [searchData]="searchData" width='350' (changed)="handleSearchInput($event)">
+        </component-search>
+      </app-popover>
+    </div>
+  </ng-container>
+  <ng-container content-1>
+    <div>
+      <component-loader [loading]="loaderService.loading" [data]="library?.books">
+        <ng-template>
+          <books-list [books]="library?.books"></books-list>
+        </ng-template>
+        <ng-container error>No book found</ng-container>
+      </component-loader>
+    </div>
+  </ng-container>
+</page-layout-wrapper>

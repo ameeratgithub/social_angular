@@ -1,0 +1,20 @@
+<mat-expansion-panel #expensionPanel (opened)="panelOpened.emit(expensionPanel)" class="mat-elevation-z">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      {{header}}
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="chat-items">
+    <chat-item (click)="itemClick.emit()"></chat-item>
+    <chat-item (click)="itemClick.emit()"></chat-item>
+    <chat-item (click)="itemClick.emit()"></chat-item>
+    <chat-item (click)="itemClick.emit()"></chat-item>
+    <chat-item (click)="itemClick.emit()"></chat-item>
+    <chat-item (click)="itemClick.emit()"></chat-item>
+    <chat-item (click)="itemClick.emit()"></chat-item>
+    <chat-item (click)="itemClick.emit()"></chat-item>
+    <chat-item (click)="itemClick.emit()"></chat-item>
+    <chat-item (click)="itemClick.emit()"></chat-item>
+    <chat-item (click)="itemClick.emit()"></chat-item>
+  </div>
+</mat-expansion-panel>

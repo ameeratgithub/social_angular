@@ -1,0 +1,67 @@
+[{
+    "id": 1,
+    "name": "This is group 1's long name.",
+    "members": [{
+        "id": 1,
+        "fullName": "Ameer Hamza",
+        "isLeader": true
+      },
+      {
+        "id": 2,
+        "fullName": "Abubakar Nawaz"
+      },
+      {
+        "id": 3,
+        "fullName": "Muhammad Waqas"
+      },
+      {
+        "id": 4,
+        "fullName": "Ali Akbar"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "This is group 2",
+    "members": [{
+        "id": 11,
+        "fullName": "Saad Khurram",
+        "isLeader": true
+      },
+      {
+        "id": 12,
+        "fullName": "Yasir Mehmood"
+      },
+      {
+        "id": 13,
+        "fullName": "Nasir Mehmood"
+      },
+      {
+        "id": 14,
+        "fullName": "Abdul Rasheed Azad"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "This is group 3",
+    "members": [{
+        "id": 21,
+        "fullName": "Usama Azad",
+        "isLeader": true
+      },
+      {
+        "id": 22,
+        "fullName": "Ali Hamza"
+      },
+      {
+        "id": 23,
+        "fullName": "Muhammad Awais"
+      },
+      {
+        "id": 24,
+        "fullName": "Luqman Yasir"
+      }
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+<mat-list-item>
+  <img mat-list-avatar class="profile-image-avatar" [src]="user.image" />
+  <a class="mat-link" [routerLink]="'/user/profile/'+user.id" mat-line>{{user.fullName}}</a>
+  <button mat-stroked-button>
+    Add Fellow
+  </button>
+</mat-list-item>

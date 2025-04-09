@@ -1,0 +1,28 @@
+<div class="question-wrapper" fxLayout="row" fxLayoutAlign="space-between center">
+  <vote-vertical fxFlex="10"></vote-vertical>
+  <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+    <a class="question-link mat-link" routerLink="/blog/questions/1">
+      Question is about javascript framework angular. That is developed by google and is very
+      popular among developers.
+    </a>
+    <mat-chip-list>
+      <mat-chip color="t-teal" routerLink="/blog/questions" [queryParams]="{tag:'angular'}">
+        angular
+      </mat-chip>
+      <mat-chip color="t-teal" routerLink="/blog/questions" [queryParams]="{tag:'javascript-framework'}">
+        javascript-framework
+      </mat-chip>
+      <mat-chip color="t-teal" routerLink="/blog/questions" [queryParams]="{tag:'framework'}">
+        framework
+      </mat-chip>
+    </mat-chip-list>
+  </div>
+  <a fxFlex="20" class="mat-link" routerLink="/user/profile/123" fxLayout="row" fxLayoutAlign="start center"
+    fxLayoutGap="6px">
+    <img class="profile-image-avatar" src="assets/images/img-2.jpg" />
+    <span>
+      <div class="mat-t-blue-d2" style="overflow:hidden">Ameer Hamza</div>
+      <small class="mat-t-teal">13 Feb, 2016 12:12 am</small>
+    </span>
+  </a>
+</div>

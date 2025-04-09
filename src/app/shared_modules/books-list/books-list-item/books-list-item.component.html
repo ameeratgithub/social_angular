@@ -1,0 +1,36 @@
+<mat-card>
+  <div class="cover-wrapper">
+    <img mat-card-image [src]="book.cover">
+    <div class="more-info">
+      <a [routerLink]="'/user/profile/'+book.uploader.id"><img [src]="book.uploader.image"></a>
+    </div>
+  </div>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <h3 matLine>
+          <a [matTooltip]="book.name" class="mat-link" [routerLink]="'/study/books/'+book.id">
+            {{book.name}}
+          </a>
+        </h3>
+        <p matLine class="mat-t-teal">{{book.author}} </p>
+        <p matLine class="mat-t-teal">{{book.category}}</p>
+        <p matLine class="mat-t-teal-l2">{{book.publishDate | date}}</p>
+        <p matLine class="mat-t-blue">
+          <button mat-icon-button matTooltip="Rate" (click)="provideReview()">
+            <mat-icon>star</mat-icon>
+          </button>
+          <span>
+            <button mat-icon-button matTooltip="Download">
+              <mat-icon>vertical_align_bottom</mat-icon>
+            </button>
+            <span class="mat-t-teal-l2">45</span>
+          </span>
+        </p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <mat-card-actions>
+    <display-rating [rating]="book.rating"></display-rating>
+  </mat-card-actions>
+</mat-card>

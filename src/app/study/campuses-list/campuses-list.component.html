@@ -1,0 +1,12 @@
+<page-layout-wrapper header="University Name">
+  <ng-container content-1>
+    <tree-wrapper header="Campuses">
+      <component-loader [loading]="loaderService.loading" [data]="campusTree">
+        <ng-template>
+          <core-tree inline="true" [treeData]="campusTree"></core-tree>
+        </ng-template>
+        <ng-container error>No campus found</ng-container>
+      </component-loader>
+    </tree-wrapper>
+  </ng-container>
+</page-layout-wrapper>

@@ -1,0 +1,21 @@
+<mat-list-item menuHover #menu="menuHover">
+  <div fxLayout="row" class="group-leader-container" fxLayoutAlign="space-between center">
+    <h4 class="no-margin mat-link" *ngIf="isMember()" (click)="openChatBox(group.id)">{{group.name | truncate :[26]}}</h4>
+    <h4 class="no-margin" *ngIf="!isMember()">{{group.name | truncate :[26]}}</h4>
+    <div>
+      <menu-wrapper [ngStyle]="{'visibility': menu.showActions?'visible':'hidden'}" icon="more_horiz" 
+      color="t-teal-l2" (opened)="menu.open()" (closed)="menu.close()">
+        <ng-container *ngIf="isLeader()">
+          <button mat-menu-item (click)="openGroupDialog()">Edit</button>
+          <button mat-menu-item (click)="remove(group)">Delete</button>
+        </ng-container>
+        <button mat-menu-item *ngIf="!isMember() && !isRequested" (click)="requestJoin()">
+          Request Join
+        </button>
+        <button mat-menu-item *ngIf="isRequested" (click)="cancelRequest()">Cancel Request</button>
+        <button mat-menu-item *ngIf="isMember() && !isLeader()" (click)="leave()">Leave</button>
+        <button mat-menu-item (click)="openMembersDialog()">Info</button>
+      </menu-wrapper>
+    </div>
+  </div>
+</mat-list-item>

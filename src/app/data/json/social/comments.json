@@ -1,0 +1,83 @@
+[{
+    "id": "1",
+    "text": "This is comment text",
+    "date":"1557954371721",
+    "commenter": {
+      "id": "1",
+      "fullName": "Ameer Hamza",
+      "image": "assets/images/img-8.jpg"
+    }
+  },
+  {
+    "id": "1",
+    "text": "This is comment text",
+    "date":"1557954371721",
+    "commenter": {
+      "id": "1",
+      "fullName": "Ameer Hamza",
+      "image": "assets/images/img-8.jpg"
+    },
+    "comments": [{
+        "id": "1",
+        "date":"1557954371721",
+        "text": "This is text of comment, long text, very long text, very important message has long text, can't break it to next line? try again.",
+        "commenter": {
+          "id": "1",
+          "fullName": "Ameer Hamza",
+          "image": "assets/images/img-8.jpg"
+        }
+      },
+      {
+        "id": "1",
+        "text": "This is comment text",
+        "date":"1557954371721",
+        "commenter": {
+          "id": "1",
+          "fullName": "Ameer Hamza",
+          "image": "assets/images/img-8.jpg"
+        }
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "text": "This is comment text",
+    "date":"1557954371721",
+    "commenter": {
+      "id": "1",
+      "fullName": "Ameer Hamza",
+      "image": "assets/images/img-8.jpg"
+    }
+  },
+  {
+    "id": "1",
+    "text": "This is comment text",
+    "date":"1557954371721",
+    "commenter": {
+      "id": "1",
+      "fullName": "Ameer Hamza",
+      "image": "assets/images/img-8.jpg"
+    },
+    "comments": [{
+        "id": "1",
+        "date":"1557954371721",
+        "text": "This is text of comment, long text, very long text, very important message has long text, can't break it to next line? try again.",
+        "commenter": {
+          "id": "1",
+          "fullName": "Ameer Hamza",
+          "image": "assets/images/img-8.jpg"
+        }
+      },
+      {
+        "id": "1",
+        "text": "This is comment text",
+        "date":"1557954371721",
+        "commenter": {
+          "id": "1",
+          "fullName": "Ameer Hamza",
+          "image": "assets/images/img-8.jpg"
+        }
+      }
+    ]
+  }
+]

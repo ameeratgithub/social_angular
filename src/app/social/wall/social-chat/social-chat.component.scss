@@ -1,0 +1,63 @@
+@import "src/assets/scss/mixins";
+
+.mat-card {
+  padding: 0;
+  background-color: transparent;
+
+}
+
+.chat-search {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.mat-form-field {
+  margin-left: 20px;
+  padding-top: 5px;
+
+  ::ng-deep {
+
+    .mat-form-field-underline {
+      display: none;
+    }
+
+    .mat-form-field-infix {
+      border: none
+    }
+
+    .mat-form-field-wrapper {
+      padding-bottom: 0.25em;
+    }
+  }
+
+}
+
+.message-box {
+  position: fixed;
+  bottom: 0;
+  right: 250px;
+  width: 270px;
+}
+
+.chat-header {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.mat-flat-button {
+  padding: 0 5px;
+  line-height: 25px;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.fellows-list {
+  max-height: 310px;
+  overflow-y: auto;
+  @include custom-scrollbar(8px);
+}
+
+.chat-groups {
+  padding: 7px;
+}

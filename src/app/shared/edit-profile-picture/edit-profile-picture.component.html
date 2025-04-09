@@ -1,0 +1,9 @@
+<div imageSnackbar class="snackbar-wrapper" #snackbar="imageSnackbar">
+  <img class="profile-image-avatar" [src]="pictureUrl" />
+  <div class="action snackbar" *ngIf="snackbar.show">
+    <button mat-icon-button (click)="pp.click()">
+      <mat-icon>add_a_photo</mat-icon>
+    </button>
+  </div>
+</div>
+<input type="file" #pp style="display:none" accept=".jpg,.png" (change)="pictureChanged($event)" />

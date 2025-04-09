@@ -1,0 +1,11 @@
+<app-dialog header="Make an announcement" actions="true" (dialogSaved)="saved()">
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="80">
+      <mat-form-field class="full-width">
+        <textarea [formControl]="announcementCtrl" matInput cdkTextareaAutosize cdkAutosizeMaxRows="7"
+          cdkAutosizeMinRows="3" placeholder="What do you know?" [value]="data?.announcement || ''">
+        </textarea>
+      </mat-form-field>
+    </div>
+  </div>
+</app-dialog>

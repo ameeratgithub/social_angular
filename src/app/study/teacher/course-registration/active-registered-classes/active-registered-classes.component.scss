@@ -1,0 +1,13 @@
+@import "src/assets/scss/components/buttons";
+
+.mat-icon {
+  font-size: 18px;
+  height: 18px;
+  width: 18px;
+}
+
+.active-class-container {
+  .mat-icon-button {
+    @include icon-button-size(19px, 16px);
+  }
+}

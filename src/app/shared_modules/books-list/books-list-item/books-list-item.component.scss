@@ -1,0 +1,43 @@
+@import 'src/assets/scss/components/buttons';
+
+.cover-wrapper {
+  position: relative;
+}
+
+.more-info {
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+  }
+
+  position: absolute;
+  padding: 5px;
+  bottom:0;
+  right: -15px;
+}
+
+.mat-card-image {
+  height: 180px;
+  margin-bottom: 0;
+}
+
+.mat-card-content {
+  margin-bottom: 0;
+}
+
+.mat-icon-button {
+  @include icon-button-size(33px, 19px);
+}
+
+.mat-list-base {
+  .mat-list-item {
+    &.mat-2-line {
+      height: auto;
+    }
+
+    ::ng-deep .mat-list-item-content {
+      padding: 0;
+    }
+  }
+}

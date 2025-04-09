@@ -1,0 +1,19 @@
+<page-layout-wrapper>
+  <ng-container header-action>
+    <app-popover [position]="popoverPosition" icon="tune" close="both" arrow="top right">
+      <component-search [searchData]="searchData" width="300" (changed)="handleSearchInput($event)">
+      </component-search>
+    </app-popover>
+  </ng-container>
+  <ng-container content-1>
+    <mat-card>
+      <mat-card-content>
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxLayoutGap="1% grid">
+          <div fxFlex="25" *ngFor="let ip of imagePosts" >
+            <images-list-item [post]="ip" (click)="openPostPopup(ip)"></images-list-item>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</page-layout-wrapper>

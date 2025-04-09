@@ -1,0 +1,37 @@
+.mat-card {
+  background-color: transparent;
+  width: 700px;
+  height: 600px;
+
+  .mat-icon-button {
+    position: absolute;
+    top: -10px;
+    right: -150px;
+  }
+}
+
+.popup-media-container {
+  ::ng-deep media-gallery {
+    .mat-icon-button {
+      top: 40%;
+    }
+    .gallery-container {
+      position: relative;
+    }
+    .media-container {
+      height: 600px;
+    }
+    .mat-icon-button.left {
+      left: -60px;
+    }
+    .mat-icon-button.right {
+      right: -30px;
+    }
+    .mat-card-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

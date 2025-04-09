@@ -1,0 +1,30 @@
+@import "src/assets/scss/components/buttons";
+
+.mat-icon-button {
+  position: absolute;
+  top: 45%;
+  background-color: lightblue;
+  @include icon-button-size(22px, 22px);
+}
+.gallery-container{
+  position: relative;
+}
+
+
+.mat-icon-button.left {
+  z-index: 1;
+  left: -5px;
+}
+
+.mat-icon-button.right {
+  right: -5px;
+}
+
+.media-container {
+  height: auto;
+}
+
+.mat-card-image {
+  display: block;
+  margin-top: 0;
+}

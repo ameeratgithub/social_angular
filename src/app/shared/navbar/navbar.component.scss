@@ -1,0 +1,27 @@
+$navHeight:50px;
+
+.mat-toolbar {
+  position: fixed;
+  z-index: 2;
+}
+
+.mat-toolbar-row {
+  height: $navHeight;
+}
+
+.mat-toolbar-multiple-rows {
+  min-height: $navHeight;
+}
+
+.mat-form-field {
+  font-size: 14px;
+}
+
+.profile-image-avatar {
+  margin-right: 7px;
+}
+
+.notifications-wrapper {
+  max-width: 400px;
+  padding-top: 4px;
+}

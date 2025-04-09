@@ -1,0 +1,45 @@
+<div>
+  <edit-section-wrapper header="Public Info">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+      <mat-form-field>
+        <input matInput type="text" placeholder="First Name" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Last Name" />
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+      <mat-form-field>
+        <mat-select placeholder="Gender">
+          <mat-option>Male</mat-option>
+          <mat-option>Female</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="text" placeholder="Address" />
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" type="text" placeholder="Date of Birth" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="actions" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+      <button mat-button>Cancel</button>
+      <button mat-flat-button color="primary">Save</button>
+    </div>
+  </edit-section-wrapper>
+  <edit-section-wrapper header="Private Info">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+      <mat-form-field>
+        <input matInput type="email" placeholder="Email" />
+      </mat-form-field>
+    </div>
+    <div class="actions" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+      <button mat-button>Cancel</button>
+      <button mat-flat-button color="primary">Save</button>
+    </div>
+  </edit-section-wrapper>
+</div>

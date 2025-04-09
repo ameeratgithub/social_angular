@@ -1,0 +1,20 @@
+.reviews {
+  margin-top: 15px;
+}
+
+.mat-chip {
+  font-size: 13px;
+  overflow: visible;
+  cursor: pointer;
+
+  &.selected {
+    background-color: #689f38;
+    color: white;
+  }
+
+  .text-icon {
+    height: 14px;
+    width: 14px;
+    font-size: 14px;
+  }
+}

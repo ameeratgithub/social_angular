@@ -1,0 +1,19 @@
+.notification-item {
+  padding: 10px;
+  font-size: small;
+  min-height: 50px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(237, 252, 252);
+  }
+}
+
+b {
+  font-weight: 500;
+}
+
+.profile-image-avatar {
+  width: 45px;
+  height: 45px;
+}

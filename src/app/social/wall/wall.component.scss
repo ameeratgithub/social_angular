@@ -1,0 +1,15 @@
+.sticky {
+  position: fixed;
+
+  &.suggestions-ad-wrapper {
+    top: 80px;
+    right: 17%;
+    width: 300px;
+  }
+
+  &.social-chat {
+    bottom: 0;
+    right: 18px;
+    width: 215px;
+  }
+}

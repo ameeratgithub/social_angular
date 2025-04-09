@@ -1,0 +1,19 @@
+<mat-selection-list #usersList>
+  <mat-hint class="mat-small">
+    <ng-content></ng-content>
+  </mat-hint>
+  <ng-container *ngIf="users?.length; else noUser">
+    <mat-list-option *ngFor="let u of users">
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <img class="profile-image-avatar" [src]="u.image" />
+        <span>
+          {{u.fullName}}
+        </span>
+      </div>
+    </mat-list-option>
+  </ng-container>
+  <ng-template #noUser>
+    <error-info>No record found</error-info>
+  </ng-template>
+  
+</mat-selection-list>

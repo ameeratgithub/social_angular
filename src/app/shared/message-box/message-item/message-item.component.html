@@ -1,0 +1,10 @@
+<div fxLayout="row" fxLayoutAlign="start end" fxLayoutGap="3px">
+  <div fxFlex="11" *ngIf="self==='false'">
+    <img *ngIf="end==='true'" class="profile-image-avatar" src="assets/images/img-3.jpg" />
+  </div>
+  <div fxFlex="70" class="message" [ngClass]="{'self':self==='true', 'other':self==='false', 'start':start==='true', 'end':end==='true'}">
+    This is text of message.
+     <!-- asd dsa dsa d sad sad sd asd sa dsa da sd asd sd sad asd
+    dsa dsa ds ad sad sad sad sa dsa -->
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<edit-section-wrapper header="Privacy">
+  <div>
+    <user-setting-switch key="Private Account">
+      With private account, your posts will be hidden from people. Only your followers will be able to
+      see them.
+    </user-setting-switch>
+  </div>
+</edit-section-wrapper>
+<edit-section-wrapper header="Blocking">
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Who you want to block?" />
+      <button matSuffix mat-button>Block</button>
+    </mat-form-field>
+    <hint-text>
+      People blocked by you, will not be able to message, tag, mention or follow you.
+    </hint-text>
+    <div class="blocked-list">
+      <p>Blocked People: </p>
+      <div style="padding-left:15px" fxLayout="row" fxLayoutAlign="space-between center">
+        <a>Ameer Hamza</a>
+        <button mat-button>Unblock</button>
+      </div>
+      <div style="padding-left:15px" fxLayout="row" fxLayoutAlign="space-between center">
+        <a>Ameer Hamza</a>
+        <button mat-button>Unblock</button>
+      </div>
+    </div>
+  </div>
+</edit-section-wrapper>

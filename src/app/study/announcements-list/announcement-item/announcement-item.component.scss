@@ -1,0 +1,11 @@
+@import "src/assets/scss/components/buttons";
+
+.announcement {
+  padding: 13px;
+}
+
+menu-wrapper {
+  ::ng-deep .mat-icon-button {
+    @include icon-button-size(26px, 20px);
+  }
+}

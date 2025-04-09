@@ -1,0 +1,15 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar class="header-image" title="" [matTooltip]="item.uploader.fullName+'\n'+item.uploader.rollNumber"
+      [style.backgroundImage]="'url('+item.uploader.image+')'">
+    </div>
+    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-subtitle>{{item.date | date}}</mat-card-subtitle>
+    <menu-wrapper icon="more_vert">
+      <input type="file" style="display:none" #fileInput />
+      <button mat-menu-item (click)="fileInput.click()">Change</button>
+      <button mat-menu-item>Download</button>
+    </menu-wrapper>
+  </mat-card-header>
+  <img mat-card-image [src]="item.url" alt="N/A" />
+</mat-card>

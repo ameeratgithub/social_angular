@@ -1,0 +1,12 @@
+<page-layout-wrapper header="People">
+  <ng-container header-action>
+    <a class="mat-link" routerLink="people">See All</a>
+  </ng-container>
+  <ng-container content-1>
+    <mat-card>
+      <mat-card-content>
+        <users-list underline="true" [users]="users"></users-list>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</page-layout-wrapper>

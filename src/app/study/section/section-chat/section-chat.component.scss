@@ -1,0 +1,23 @@
+@import "src/assets/scss/mixins";
+
+.mat-card {
+  padding: 0;
+  width: 400px;
+  transition: width 0.1s;
+
+  h4 {
+    margin-left: 10px;
+  }
+}
+
+.section-chat {
+  padding: 0;
+  transition: height 0.1s;
+
+}
+
+.messages {
+  height: 465px;
+  overflow-y: auto;
+  @include custom-scrollbar(7px);
+}

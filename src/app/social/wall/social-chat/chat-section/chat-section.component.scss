@@ -1,0 +1,10 @@
+.mat-expansion-panel {
+  width: 215px;
+  
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 0 5px 16px !important;
+  max-height: 250px;
+  overflow-y: auto;
+}

@@ -1,0 +1,17 @@
+<div fxLayout="row" fxLayoutAlign="start center" class="post-reactions" fxLayoutGap="7px">
+  <div *ngIf="!post.hasReactions">Be first to like this</div>
+  <div *ngIf="post.totalLikes" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="3px" (click)="likesClicked()">
+    <mat-icon style="color:red">favorite</mat-icon>
+    <span>{{post.totalLikes | numberSuffix}}</span>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="start center" class="right-actions" fxLayoutGap="7px">
+    <div *ngIf="post.totalComments" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="3px" (click)="commentsClicked()">
+      <mat-icon>chat_bubble_outline</mat-icon>
+      <span>{{post.totalComments}}</span>
+    </div>
+    <div *ngIf="post.totalShares" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="3px" (click)="sharesClicked()">
+      <mat-icon>share</mat-icon>
+      <span>{{post.totalShares}}</span>
+    </div>
+  </div>
+</div>

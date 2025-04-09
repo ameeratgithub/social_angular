@@ -1,0 +1,38 @@
+.mat-card {
+  padding-bottom: 0;
+  margin-bottom: 20px;
+
+  ::ng-deep .input-content {
+    font-size: 18px;
+    line-height: 24px;
+    min-height: 70px;
+  }
+}
+
+@mixin size() {
+  height: 80px;
+  width: 95px;
+}
+
+.thumbnail-container {
+  &,
+  .image-thumbnail {
+    @include size();
+  }
+  
+  .mat-progress-spinner {
+    left: 37%;
+    top: 30%;
+  }
+
+}
+
+
+.mat-flat-button {
+  margin-left: auto;
+}
+
+.add-post-actions {
+  border-top: 1px solid rgb(211, 235, 235);
+  padding: 5px;
+}

@@ -1,0 +1,53 @@
+<div class="comment-wrapper" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="7px">
+  <a fxFlex="32px" routerLink="/user/profile/123">
+    <img class="profile-image-avatar" src="assets/images/img-5.jpg" />
+  </a>
+  <div class="comment">
+    <div menuHover  #menu="menuHover">
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+        <div class="comment-details">
+          <a routerLink="/user/profile/123" class="mat-link mat-t-teal">Ameer Hamza</a>
+          <span class="comment-text">
+            <span>{{comment.text}}</span>
+          </span>
+          <div class="total-likes mat-t-teal" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="3px">
+            <mat-icon>favorite</mat-icon>
+            <span>12</span>
+          </div>
+        </div>
+        <menu-wrapper class="menu-wrapper" icon="more_horiz" color="t-teal-l2"
+          [ngStyle]="{'visibility': menu.showActions?'visible':'hidden'}" (opened)="menu.open()"
+          (closed)="menu.close()">
+          <button mat-menu-item>Report</button>
+          <button mat-menu-item>Delete</button>
+          <button mat-menu-item>Hide</button>
+        </menu-wrapper>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start baseline">
+        <small class="mat-t-teal-l2">2h</small>
+        <button mat-icon-button class="small" color="t-teal" fxFlexOffset="5px" disableRipple>
+          <mat-icon>
+            favorite_bordered
+          </mat-icon>
+        </button>
+        <button mat-flat-button color="t-teal" (click)="toggleReplyInput()" disableRipple>
+          Reply
+        </button>
+      </div>
+    </div>
+    <ng-container *ngIf="!isLeaf()">
+      <div>
+        <button mat-flat-button color="t-teal-l2" disableRipple (click)="showReplies=!showReplies">
+          {{showReplies?"Hide":"View"}} {{comment.comments.length}} Replies
+        </button>
+      </div>
+      <ng-container *ngIf="showReplies">
+        <comment-item *ngFor="let reply of comment.comments" [comment]="reply" (tagInReply)="mentionInReply($event)">
+        </comment-item>
+      </ng-container>
+    </ng-container>
+    <div *ngIf="replyInputVisible" class="comment-input-wrapper">
+      <comment-input [taggedPerson]="personToTag"></comment-input>
+    </div>
+  </div>
+</div>

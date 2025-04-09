@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-header fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-card-title>Groups</mat-card-title>
+    <button mat-icon-button color="primary" (click)="openGroupDialog()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-card-header>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <mat-list *ngIf="groups; else loading">
+      <ng-container *ngIf="groups.length; else noItem">
+        <course-group-item *ngFor="let g of groups" [group]="g" (removed)="remove($event)" (openBox)="messageBoxOpened=true">
+        </course-group-item>
+      </ng-container>
+    </mat-list>
+    <ng-template #loading>
+      <app-spinner diameter="30"></app-spinner>
+    </ng-template>
+    <ng-template #noItem>
+      <error-info>
+        <h4 class="no-margin">No group found</h4>
+      </error-info>
+    </ng-template>
+  </mat-card-content>
+</mat-card>
+<div *ngIf="messageBoxOpened" class="message-box">
+  <message-box (close)="messageBoxOpened=false"></message-box>
+</div>

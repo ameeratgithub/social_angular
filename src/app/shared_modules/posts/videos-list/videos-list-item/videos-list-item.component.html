@@ -1,0 +1,15 @@
+<div class="videos-list-item" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+  <div class="video-cover-container" imageSnackbar #infobar="imageSnackbar" (click)="openPostPopup()">
+    <media-thumbnail [type]="thumbnail.type" [image]="thumbnail.url"></media-thumbnail>
+    <div class="post-reactions" *ngIf="infobar.show && post.hasReactions">
+      <post-reactions [post]="post"></post-reactions>
+    </div>
+  </div>
+  <div class="video-details-container" fxLayout="column" fxLayoutAlign="space-between start">
+    <a class="mat-link" fxFlex="63px" href="javascript:;" (click)="openPostPopup()">
+      {{post.text}}
+    </a>
+    <a class="mat-link extra-link mat-t-teal" href="javascript:;">{{post.uploader.fullName}}</a>
+    <a class="mat-link extra-link mat-t-teal"> 1,134 views - Apr 13, 2019</a>
+  </div>
+</div>

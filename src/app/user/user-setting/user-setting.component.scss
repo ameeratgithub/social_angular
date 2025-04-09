@@ -1,0 +1,17 @@
+.mat-drawer-container {
+  min-height: 500px;
+  // width: 700px;
+  .mat-drawer-content {
+    padding: 30px 40px;
+    
+  }
+}
+
+.mat-button {
+  width: 120px;
+  text-align: right;
+
+  &.active {
+    background: rgba($color: #000000, $alpha: .08);
+  }
+}

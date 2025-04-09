@@ -1,0 +1,18 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+  <div class="rating-display">
+    <div [style.width.%]="getStarsWidth()" class="actual-rating">
+      <mat-icon [color]="getStarColor()" *ngFor="let star of totalStars">
+        star
+      </mat-icon>
+    </div>
+    <div style="width:100%">
+      <mat-icon [color]="getStarColor()" *ngFor="let star of totalStars">
+        star_bordered
+      </mat-icon>
+    </div>
+  </div>
+  <button mat-button (click)="openReviewsDialog()">
+    <span>{{this.rating}}</span>
+    <span class="mat-small mat-t-teal" style="margin-left:5px;">(43)</span>
+  </button>
+</div>

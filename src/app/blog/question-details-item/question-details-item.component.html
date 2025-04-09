@@ -1,0 +1,62 @@
+<div class="details-item-wrapper">
+  <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="20px">
+    <div fxFlex="7">
+      <vote-vertical></vote-vertical>
+    </div>
+    <div fxFlex="85" class="question-details">
+      <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem enim sint repudiandae
+        cumque sed quam sapiente dolorum, iste dolorem doloribus cupiditate commodi obcaecati laborum
+        debitis veniam atque quo quas? Nemo. <br />
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem enim sint repudiandae
+        cumque sed quam sapiente dolorum, iste dolorem doloribus cupiditate commodi obcaecati laborum
+        debitis veniam atque quo quas? Nemo. <br />
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem enim sint repudiandae
+        cumque sed quam sapiente dolorum, iste dolorem doloribus cupiditate commodi obcaecati laborum
+        debitis veniam atque quo quas? Nemo.
+      </div>
+      <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="15%">
+        <mat-chip-list>
+          <mat-chip color="t-teal" routerLink="/blog/questions" [queryParams]="{tag:'angular'}">
+            angular
+          </mat-chip>
+          <mat-chip color="t-teal" routerLink="/blog/questions" [queryParams]="{tag:'javascript-framework'}">
+            javascript-framework
+          </mat-chip>
+          <mat-chip color="t-teal" routerLink="/blog/questions" [queryParams]="{tag:'framework'}">
+            framework
+          </mat-chip>
+        </mat-chip-list>
+        <a class="mat-link" routerLink="/user/profile/123" fxLayout="row" fxLayoutAlign="start center"
+          fxLayoutGap="6px">
+          <img class="profile-image-avatar" src="assets/images/img-2.jpg" />
+          <span>
+            <div>Ameer Hamza</div>
+            <small class="mat-t-teal">13 Feb, 2016 12:12 am</small>
+          </span>
+        </a>
+      </div>
+      <div class="comments">
+        <details-comment></details-comment>
+        <details-comment></details-comment>
+        <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="7px">
+          <mat-form-field fxFlex="65" *ngIf="showCommentInput">
+            <input matInput placeholder="Write comment..." />
+          </mat-form-field>
+          <button mat-icon-button matTooltip="Add Comment" color="t-teal-l2"
+            (click)="showCommentInput=!showCommentInput">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div fxFlex fxLayout="column" fxLayoutAlign="start center">
+      <menu-wrapper color="t-teal-l2" icon="more_horiz">
+        <button mat-menu-item>Edit</button>
+        <button mat-menu-item>Share</button>
+        <button mat-menu-item>Report</button>
+      </menu-wrapper>
+    </div>
+  </div>
+
+</div>

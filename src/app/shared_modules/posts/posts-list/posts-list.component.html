@@ -1,0 +1,13 @@
+<page-layout-wrapper>
+  <ng-container header-action>
+    <app-popover [position]="popoverPosition" icon="tune" close="both" arrow="top right">
+      <component-search [searchData]="searchData" width="300" (changed)="handleSearchInput($event)">
+      </component-search>
+    </app-popover>
+  </ng-container>
+  <ng-container content-1>
+    <div class="posts-list-item" *ngFor="let post of posts">
+      <posts-list-item [post]="post"></posts-list-item>
+    </div>
+  </ng-container>
+</page-layout-wrapper>

@@ -1,0 +1,11 @@
+@import "src/assets/scss/components/cards";
+
+@include no-card-title-margin();
+
+.mat-card-header {
+  margin-bottom: 10px;
+
+  .mat-card-subtitle:not(:first-child) {
+    margin-top: 5px;
+  }
+}

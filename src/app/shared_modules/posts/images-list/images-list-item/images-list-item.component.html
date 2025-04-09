@@ -1,0 +1,6 @@
+<div class="images-list-item" imageSnackbar #infobar="imageSnackbar">
+  <media-thumbnail [type]="thumbnail.type" [image]="thumbnail.url"></media-thumbnail>
+  <div class="post-reactions" *ngIf="infobar.show && post.hasReactions">
+    <post-reactions [post]="post"></post-reactions>
+  </div>
+</div>

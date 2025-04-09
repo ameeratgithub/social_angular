@@ -1,0 +1,15 @@
+@import "../mixins.scss";
+
+@mixin icon-button-size($button-size, $icon-size) {
+  @include square-line-height($button-size);
+
+  ::ng-deep .mat-button-wrapper {
+    line-height: $button-size;
+  }
+
+  .mat-icon {
+    @include square-line-height($icon-size);
+    font-size: $icon-size;
+  }
+
+}

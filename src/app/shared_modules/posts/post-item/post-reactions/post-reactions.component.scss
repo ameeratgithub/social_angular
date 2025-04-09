@@ -1,0 +1,22 @@
+.post-reactions {
+  color: rgb(165, 172, 172);
+  font-size: 12px;
+  &>div:not(.right-actions) {
+    cursor: pointer;
+  }
+
+  .mat-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+
+  }
+  .right-actions {
+    margin-left: auto;
+    margin-right: 10px;
+
+    &>div {
+      cursor: pointer;
+    }
+  }
+}

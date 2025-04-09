@@ -1,0 +1,8 @@
+::ng-deep {
+  .mat-tab-link,
+  .mat-tab-link-active {
+    min-width: 0 !important;
+    padding: 3px 10px !important;
+    margin: 1px !important;
+  }
+}

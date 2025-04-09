@@ -1,0 +1,12 @@
+<div fxLayoutAlign="start center">
+  <mat-form-field>
+    <mat-label>Session</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let s of sessions" [value]="s.name">{{s.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-icon-button #tooltip="matTooltip" matTooltip="Pick the session (2013/2014/2015 etc) for this class"
+    (click)="tooltip.toggle()" color="t-teal-l2">
+    <mat-icon>help_outline</mat-icon>
+  </button>
+</div>

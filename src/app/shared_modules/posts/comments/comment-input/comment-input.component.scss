@@ -1,0 +1,20 @@
+.comment-input {
+  padding: 5px;
+  border: 1px solid rgba($color: #a19d9d, $alpha: .1);
+  border-radius: 40px;
+  ::ng-deep .input-content {
+    font-size: 13px;  
+    padding: 2px;
+    padding-left: 10px;
+    &:empty {
+      &::before {
+        font-size: 13px;
+        content: 'Write comment...';
+      }
+    }
+  }
+}
+.profile-image-avatar {
+  width: 32px;
+  height: 32px;
+}

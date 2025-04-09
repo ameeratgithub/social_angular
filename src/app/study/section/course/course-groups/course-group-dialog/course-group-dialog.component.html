@@ -1,0 +1,19 @@
+<app-dialog [header]="action + ' group'" actions="true" [buttons]="buttons" [loading]='loading'>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="80">
+      <mat-form-field class="full-width">
+        <input #groupNameInput matInput placeholder="Group name" value="Group A" />
+      </mat-form-field>
+      <div>
+        <users-selection-list [users]="[]">
+          Current group members
+        </users-selection-list>
+      </div>
+      <div>
+        <users-selection-list [users]="students">
+          Select students to invite.
+        </users-selection-list>
+      </div>
+    </div>
+  </div>
+</app-dialog>

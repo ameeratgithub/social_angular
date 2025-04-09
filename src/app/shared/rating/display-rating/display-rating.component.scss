@@ -1,0 +1,15 @@
+.mat-icon-button {
+  height: 20px;
+  width: 25px;
+  line-height: 20px;
+}
+
+.rating-display {
+  position: relative;
+
+  .actual-rating {
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+  }
+}

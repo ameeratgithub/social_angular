@@ -1,0 +1,27 @@
+<mat-card class="mat-elevation-z0">
+  <mat-card-content>
+    <input-contenteditable #editable (change)="isInputEmpty=$event; toggleButton()" (save)="save($event)" type="post">
+    </input-contenteditable>
+    <div fxLayout="row wrap" fxLayoutAlign="start center" class="media-thumbnails">
+      <div *ngFor="let i of images" class="thumbnail-container">
+        <img class="image-thumbnail" *ngIf="i.url" [src]="i.url" />
+        <mat-progress-spinner mode="determinate" diameter="25" value="98"></mat-progress-spinner>
+        <button mat-icon-button disableRipple (click)="removeMedia(i)">
+          <mat-icon>clear</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div fxLayout="row" class="add-post-actions" fxLayoutAlign="start center">
+      <button mat-icon-button color="t-cyan" (click)="mediaInput.click()">
+        <mat-icon>photo</mat-icon>
+      </button>
+      <emoji-popover [position]="popoverPosition" (clicked)="editable.appendEmoji(24,$event)" arrow="top left">
+      </emoji-popover>
+      <button mat-flat-button color="primary" [disabled]="shouldButtonDisabled" (click)="editable.getData()">
+        Post
+      </button>
+    </div>
+  </mat-card-content>
+  <input type="file" #mediaInput style="display:none" accept="image/*" (change)="handleMedia($event.target.files)"
+    multiple />
+</mat-card>

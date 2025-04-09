@@ -1,0 +1,17 @@
+<div class="announcement" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="8px" menuHover #menu="menuHover">
+  <img fxFlex="25px" class="profile-image-avatar" [src]="announcement.announcer.image" />
+  <div>
+    <span> {{announcement.text}}</span>
+    <span class="mat-small mat-t-teal">
+      {{announcement.date | date}} at {{announcement.time | absoluteTime}}
+    </span>
+    <span *ngIf="isAnnouncer">
+      <menu-wrapper  icon="more_horiz" color="t-teal-l2" (opened)="menu.open()" (closed)="menu.close()"
+      [ngStyle]="{'visibility': menu.showActions?'visible':'hidden'}" >
+        <button mat-menu-item (click)="openAnnouncementDialog()">Edit</button>
+        <button mat-menu-item (click)="openConfirmationDialog()">Delete</button>
+      </menu-wrapper>
+    </span>
+  </div>
+
+</div>

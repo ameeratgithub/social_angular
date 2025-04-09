@@ -1,0 +1,46 @@
+<mat-toolbar color="green">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="brand-logo">Logo Here</span>
+    <span class="nav-items" fxFlexOffset="20%" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+      <a mat-button routerLink="/user/profile/123">
+        <img class="profile-image-avatar" src="assets/images/img-5.jpg" />
+        <span>Ameer</span>
+      </a>
+      <a mat-button routerLink="/">
+        Home
+      </a>
+      <div>
+        <app-popover [position]="popoverPosition" icon="chat_bubble_outline" arrow="top right">
+          <div class="notifications-wrapper">
+            <ng-container *ngFor="let gn of [1,2,3,4,5,6]">
+              <notification-item></notification-item>
+              <mat-divider></mat-divider>
+            </ng-container>
+          </div>
+        </app-popover>
+      </div>
+      <div>
+        <app-popover [position]="popoverPosition" icon="notifications_none" arrow="top right">
+          <ng-container *ngFor="let gn of [1,2,3,4,5,6]">
+            <notification-item></notification-item>
+            <mat-divider></mat-divider>
+          </ng-container>
+        </app-popover>
+      </div>
+      <menu-wrapper icon="arrow_drop_down">
+        <a mat-menu-item routerLink="/user/setting">Setting</a>
+        <button mat-menu-item>Logout</button>
+      </menu-wrapper>
+    </span>
+    <mat-form-field fxFlex.gt-md="20" floatLabel="never" fxFlexOffset="20%">
+      <input matInput type="text" #searchInput placeholder="Search" autocomplete="off"
+        (keyup.enter)="search(searchInput.value)">
+      <button mat-button matSuffix (click)="search(searchInput.value)">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </mat-toolbar-row>
+</mat-toolbar>

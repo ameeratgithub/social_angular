@@ -1,0 +1,12 @@
+<div fxLayoutAlign="start center">
+  <mat-form-field>
+    <mat-label>Time</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let t of timings" [value]="t.name">{{t.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-icon-button #tooltip="matTooltip" matTooltip="Pick the timing (Evening/Morning) for this class"
+    (click)="tooltip.toggle()" color="t-teal-l2">
+    <mat-icon>help_outline</mat-icon>
+  </button>
+</div>

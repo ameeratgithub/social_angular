@@ -1,0 +1,29 @@
+<app-dialog [header]="header" actions="true" [loading]="loading" (dialogSaved)="save($event)">
+  <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="10px" class="book-info">
+    <mat-form-field>
+      <input matInput placeholder="Name" [value]="book?.name" />
+    </mat-form-field>
+    <mat-form-field>
+      <textarea cdkTextareaAutosize cdkAutosizeMaxRows="5" matInput placeholder="Description" [value]="book?.description || ''"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select [value]="book?.category || ''">
+        <mat-option value="">--Select Category--</mat-option>
+        <mat-option *ngFor="let c of categories" [value]="c">{{c}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Author's full name" [value]="book?.author || ''" />
+    </mat-form-field>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <button mat-stroked-button (click)="book.click()">
+        Upload Book
+      </button>
+      <mat-progress-bar fxFlex="40" mode="determinate" value="60"></mat-progress-bar>
+      <button mat-icon-button>
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+  <input type="file" style="display:none" #book />
+</app-dialog>

@@ -1,0 +1,14 @@
+@import "src/assets/scss/components/cards.scss";
+
+@include no-card-title-margin();
+
+.mat-card-header {
+  margin-bottom: 10px;
+}
+
+.message-box {
+  position: fixed;
+  bottom: 0;
+  right: 100px;
+  width: 280px;
+}

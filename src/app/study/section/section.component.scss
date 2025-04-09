@@ -1,0 +1,18 @@
+.section-chat-wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 30px;
+
+}
+
+.left-flex>div:not(:first-child) {
+  margin-top: 20px;
+}
+
+.mat-mini-fab .material-icons {
+  font-size: 20px;
+}
+
+.component-container {
+  margin-top: 10px;
+}

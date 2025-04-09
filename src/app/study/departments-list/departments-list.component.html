@@ -1,0 +1,15 @@
+<page-layout-wrapper header="Program Name">
+  <ng-container content-1>
+    <tree-wrapper header="Departments">
+      <component-loader [loading]="loaderService.loading" [data]="departmentTree">
+        <ng-template>
+          <core-tree inline="true" [treeData]="departmentTree"></core-tree>   
+        </ng-template>
+        <ng-container error>No department found</ng-container>
+      </component-loader>
+    </tree-wrapper>
+  </ng-container>
+  <ng-container content-2>
+    <announcements-list [loading]="loaderService.loading" [announcements]="announcements"></announcements-list>
+  </ng-container>
+</page-layout-wrapper>

@@ -1,0 +1,7 @@
+@import "src/assets/scss/mixins";
+
+.messages {
+  height: 300px;
+  overflow-y: auto;
+  @include custom-scrollbar(7px);
+}

@@ -1,0 +1,45 @@
+<mat-card>
+  <component-loader [loading]="loaderService.loading" [data]="book">
+    <ng-template >
+      <mat-card-content fxLayout="column" fxLayoutGap="4%">
+        <div class="book-image" fxFlexAlign="center">
+          <img [src]="book.cover">
+        </div>
+        <div class="book-details" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="10px">
+          <div fxLayout="row" fxLayoutAlign="space-between center" class="full-width">
+            <h2 class="mat-title">{{book.name}}</h2>
+            <menu-wrapper color="t-teal" icon="more_horiz">
+              <button mat-menu-item (click)="openDialog()">Edit</button>
+            </menu-wrapper>
+          </div>
+          <details-item key="Author(s)" [value]="book.author"></details-item>
+          <details-item key="Description" [value]="book.description"></details-item>
+          <details-item key="Published Date" value="{{book.publishDate | date}}"></details-item>
+          <details-item key="Category" [value]="book.category"></details-item>
+          <details-item key="Uploaded By">
+            <a mat-icon-button disableRipple [routerLink]="'/user/profile/'+book.uploader.id" color="primary">
+              {{book.uploader.fullName}}
+            </a>
+          </details-item>
+          <div class="mat-body" class="book-actions" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="20px">
+            <div class="mat-t-blue">
+              <button mat-icon-button matTooltip="Rate" (click)="provideReview()">
+                <mat-icon>star</mat-icon>
+              </button>
+              <span>
+                <button mat-icon-button matTooltip="Download">
+                  <mat-icon>vertical_align_bottom</mat-icon>
+                </button>
+                <span class="mat-t-teal-l2">45</span>
+              </span>
+            </div>
+            <display-rating [rating]="book.rating" starCount="5" color="t-orange">
+            </display-rating>
+          </div>
+        </div>
+      </mat-card-content>
+    </ng-template>
+    <ng-container error>Book not found</ng-container>
+  </component-loader>
+
+</mat-card>

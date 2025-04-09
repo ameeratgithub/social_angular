@@ -1,0 +1,24 @@
+<page-layout-wrapper header="Universities">
+  <ng-container header-action>
+    <app-popover [position]="popoverPosition" icon="tune" close="both" arrow="top right">
+      <component-search [searchData]="searchData" width="300" (changed)="handleSearchInput($event)">
+      </component-search>
+    </app-popover>
+  </ng-container>
+  <ng-container content-1>
+    <mat-card>
+      <mat-card-content>
+        <component-loader [loading]="isLoading" [data]="universities">
+          <ng-template>
+            <mat-list>
+              <university-item *ngFor="let u of universities" [university]="u"></university-item>
+            </mat-list>
+          </ng-template>
+          <ng-container error>
+            No university found
+          </ng-container>
+        </component-loader>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</page-layout-wrapper>

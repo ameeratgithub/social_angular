@@ -1,0 +1,17 @@
+<div fxLayoutAlign="start center">
+  <mat-form-field>
+    <mat-label>Program</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let p of programs" [value]="p.name">{{p.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-icon-button #tooltip="matTooltip" matTooltip="Pick the program (BS/MPhil/PhD etc) for this class"
+    (click)="tooltip.toggle()" color="t-teal-l2">
+    <mat-icon>help_outline</mat-icon>
+  </button>
+  <menu-wrapper icon="more_horiz" color="t-teal-l2">
+    <button mat-menu-item (click)="openAddDialog()">Add</button>
+    <button mat-menu-item (click)="openEditDialog()">Edit</button>
+    <button mat-menu-item (click)="confirmDelete()">Delete</button>
+  </menu-wrapper>
+</div>

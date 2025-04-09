@@ -1,0 +1,19 @@
+<page-layout-wrapper [header]="header" leftFlex="100">
+  <ng-container header-action>
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+      <button mat-icon-button *ngIf="isUniversityLink" color="primary" (click)="openProjectDialog()">
+        <mat-icon>add</mat-icon>
+      </button>
+      <a mat-icon-button *ngIf="!isUniversityLink" routerLink="/study/projects" [queryParams]="{area:'university',id:1}">
+        <img class="profile-image-avatar" src="assets/universities/1/logo.png" />
+      </a>
+      <app-popover [position]="popoverPosition" arrow="top right" icon="tune" close="both">
+        <component-search [searchData]="searchData" width='350' (changed)="handleSearchInput($event)">
+        </component-search>
+      </app-popover>
+    </div>
+  </ng-container>
+  <ng-container content-1>
+    <projects-list></projects-list>
+  </ng-container>
+</page-layout-wrapper>

@@ -1,0 +1,19 @@
+<div>
+  <button mat-icon-button [color]="buttonColor" cdkOverlayOrigin #trigger="cdkOverlayOrigin" (click)="isOpen = !isOpen">
+    <mat-icon>{{icon}}</mat-icon>
+  </button>
+  <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen"
+    cdkConnectedOverlayBackdropClass='cdk-overlay-transparent-backdrop' [cdkConnectedOverlayPositions]="positions"
+    cdkConnectedOverlayHasBackdrop="close==='backdrop' || close==='both'" (backdropClick)="isOpen = false">
+    <mat-card class="mat-elevation-z0 arrow" [ngClass]="arrow">
+      <mat-card-header *ngIf="close==='button' || close==='both'">
+        <button mat-icon-button color="t-teal" (click)="isOpen = false">
+          <mat-icon>clear</mat-icon>
+        </button>
+      </mat-card-header>
+      <mat-card-content>
+        <ng-content></ng-content>
+      </mat-card-content>
+    </mat-card>
+  </ng-template>
+</div>

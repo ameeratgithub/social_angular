@@ -1,0 +1,8 @@
+<mat-card style="padding:0" class="mat-elevation-z0" (click)="$event.stopPropagation()">
+  <button mat-icon-button color="t-teal-l2" (click)="closeGalleryPopup()">
+    <mat-icon>clear</mat-icon>
+  </button>
+  <div class="popup-media-container">
+    <media-gallery [list]="media.list" [currentIndex]="media.currentIndex"></media-gallery>
+  </div>
+</mat-card>

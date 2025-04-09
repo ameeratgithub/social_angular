@@ -1,0 +1,57 @@
+[{
+    "id": 1,
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam totam ducimus ipsum neque",
+    "date": 1553668873602,
+    "time": {
+      "hours": 11,
+      "minutes": 43
+    },
+    "announcer": {
+      "id": 1,
+      "name": "Ameer Hamza",
+      "image": "assets/images/img-1.jpg"
+    }
+  },
+  {
+    "id": 2,
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam totam ducimus ipsum neque",
+    "date": 1553668873602,
+    "time": {
+      "hours": 11,
+      "minutes": 43
+    },
+    "announcer": {
+      "id": 2,
+      "name": "Usama Azad",
+      "image": "assets/images/img-2.jpg"
+    }
+  },
+  {
+    "id": 3,
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam totam ducimus ipsum neque",
+    "date": 1553668873602,
+    "time": {
+      "hours": 11,
+      "minutes": 43
+    },
+    "announcer": {
+      "id": 11,
+      "name": "Muhammad Waqas",
+      "image": "assets/images/img-3.jpg"
+    }
+  },
+  {
+    "id": 4,
+    "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam totam ducimus ipsum neque",
+    "date": 1553668873602,
+    "time": {
+      "hours": 11,
+      "minutes": 43
+    },
+    "announcer": {
+      "id": 21,
+      "name": "Luqman Yasir",
+      "image": "assets/images/img-4.jpg"
+    }
+  }
+]

@@ -1,0 +1,123 @@
+{
+  "id": 1,
+  "books": [{
+      "id": 1,
+      "name": "The Curious Incident of the Dog in the Night-Time",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt suscipit, placeat animi",
+      "publishDate": "Mar 9, 2019",
+      "category": "Literature",
+      "author": "FirstN SecondN ThirdName",
+      "date": "Mar 9, 2019",
+      "cover": "assets/images/img-4.jpg",
+      "uploader": {
+        "id": 1,
+        "fullName": "Ameer Hamza",
+        "image": "assets/images/img-7.jpg"
+      },
+      "rating": 1.5,
+      "totalReviews": 32
+    },
+    {
+      "id": 1,
+      "name": "The Curious Incident of the Dog in the Night-Time",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt suscipit, placeat animi",
+      "publishDate": "Mar 9, 2019",
+      "category": "Literature",
+      "author": "FirstN SecondN ThirdName",
+      "date": "Mar 9, 2019",
+      "cover": "assets/images/img-4.jpg",
+      "uploader": {
+        "id": 1,
+        "fullName": "Ameer Hamza",
+        "image": "assets/images/img-7.jpg"
+      },
+      "rating": 4.6,
+      "totalReviews": 32
+    },
+    {
+      "id": 1,
+      "name": "The Curious Incident of the Dog in the Night-Time",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt suscipit, placeat animi",
+      "publishDate": "Mar 9, 2019",
+      "category": "Literature",
+      "author": "FirstN SecondN ThirdName",
+      "date": "Mar 9, 2019",
+      "cover": "assets/images/img-6.jpg",
+      "uploader": {
+        "id": 1,
+        "fullName": "Ameer Hamza",
+        "image": "assets/images/img-7.jpg"
+      },
+      "rating": 4.6,
+      "totalReviews": 32
+    },
+    {
+      "id": 1,
+      "name": "The Curious Incident of the Dog in the Night-Time",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt suscipit, placeat animi",
+      "publishDate": "Mar 9, 2019",
+      "category": "Literature",
+      "author": "FirstN SecondN ThirdName",
+      "date": "Mar 9, 2019",
+      "cover": "assets/images/img-5.jpg",
+      "uploader": {
+        "id": 1,
+        "fullName": "Ameer Hamza",
+        "image": "assets/images/img-7.jpg"
+      },
+      "rating": 4.6,
+      "totalReviews": 32
+    },
+    {
+      "id": 1,
+      "name": "The Curious Incident of the Dog in the Night-Time",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt suscipit, placeat animi",
+      "publishDate": "Mar 9, 2019",
+      "category": "Literature",
+      "author": "FirstN SecondN ThirdName",
+      "date": "Mar 9, 2019",
+      "cover": "assets/images/img-4.jpg",
+      "uploader": {
+        "id": 1,
+        "fullName": "Ameer Hamza",
+        "image": "assets/images/img-3.jpg"
+      },
+      "rating": 4.6,
+      "totalReviews": 32
+    },
+    {
+      "id": 1,
+      "name": "The Curious Incident of the Dog in the Night-Time",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt suscipit, placeat animi",
+      "publishDate": "Mar 9, 2019",
+      "category": "Literature",
+      "author": "FirstN SecondN ThirdName",
+      "date": "Mar 9, 2019",
+      "cover": "assets/images/img-2.jpg",
+      "uploader": {
+        "id": 1,
+        "fullName": "Ameer Hamza",
+        "image": "assets/images/img-7.jpg"
+      },
+      "rating": 4.6,
+      "totalReviews": 32
+    },
+    {
+      "id": 1,
+      "name": "The Curious Incident of the Dog in the Night-Time",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt suscipit, placeat animi",
+      "publishDate": "Mar 9, 2019",
+      "category": "Literature",
+      "author": "FirstN SecondN ThirdName",
+      "date": "Mar 9, 2019",
+      "cover": "assets/images/img-1.jpg",
+      "uploader": {
+        "id": 1,
+        "fullName": "Muhammad Waqas Mehar",
+        "image": "assets/images/img-8.jpg"
+      },
+      "rating": 4.9,
+      "totalReviews": 56
+    }
+  ]
+}

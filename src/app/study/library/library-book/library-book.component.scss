@@ -1,0 +1,34 @@
+.mat-card {
+  max-width: 800px;
+}
+
+.book-image {
+  img {
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+  }
+}
+
+.book-details {
+  margin-left: 5%;
+}
+
+%margin-block {
+  margin-block-end: 0.3em;
+  margin-block-start: 0.3em;
+}
+
+p {
+  @extend %margin-block;
+}
+
+h2.mat-title {
+
+  @extend %margin-block;
+  margin: 0;
+}
+
+.book-actions {
+  width: 300px;
+}

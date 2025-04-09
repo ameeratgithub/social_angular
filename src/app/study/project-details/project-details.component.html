@@ -1,0 +1,59 @@
+<mat-card>
+  <mat-card-header fxLayout="row" fxLayoutAlign="start center">
+    <mat-card-title>Project Details</mat-card-title>
+    <div style="margin-left:auto">
+      <menu-wrapper icon="more_horiz">
+        <button mat-menu-item (click)="openProjectDialog()">Edit</button>
+      </menu-wrapper>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="10px">
+      <details-item key="Name" value="Long title of project which is considerable"></details-item>
+      <details-item key="Description"
+        value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque laboriosam dolorum pariatur mollitia rerum? Obcaecati maiores sunt magnam facilis modi. Aliquid, saepe omnis labore debitis et enim nemo sint.">
+      </details-item>
+      <details-item key="File" value="Filename.rar"></details-item>
+      <details-item key="Uploaded at" value="9 Feb, 2019"></details-item>
+      <details-item key="Uploaded by" value="Ameer Hamza" link="/user/profile/123"></details-item>
+      <details-item key="Tags">
+        <mat-chip-list>
+          <mat-chip routerLink="/study/projects" [queryParams]="{tag:'CSharp'}">CSharp</mat-chip>
+          <mat-chip routerLink="/study/projects" [queryParams]="{tag:'javascript'}">javascript</mat-chip>
+          <mat-chip routerLink="/study/projects" [queryParams]="{tag:'angular-material'}">Angular Material</mat-chip>
+        </mat-chip-list>
+      </details-item>
+      <details-item key="Images">
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxLayoutGap="1% grid">
+          <div fxFlex="20" *ngFor="let img of imagesList; index as i" class="media-container" (click)="openImages(i)">
+            <media-thumbnail [image]="img.url">
+            </media-thumbnail>
+          </div>
+        </div>
+      </details-item>
+      <details-item key="Videos">
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" fxLayoutGap="1% grid">
+          <div fxFlex="20" *ngFor="let v of videosList; index as i" class="media-container" (click)="openVideos(i)">
+            <media-thumbnail [image]="v.cover" type="video">
+            </media-thumbnail>
+          </div>
+        </div>
+      </details-item>
+      <div fxLayout="row" fxLayoutAlign="space-around center">
+        <display-rating [rating]="rating" starCount="5" color="t-orange">
+        </display-rating>
+        <div class="mat-t-blue">
+          <button mat-icon-button matTooltip="Rate" (click)="provideReview()">
+            <mat-icon>star</mat-icon>
+          </button>
+          <span>
+            <button mat-icon-button matTooltip="Download">
+              <mat-icon>vertical_align_bottom</mat-icon>
+            </button>
+            <span class="mat-t-teal-l2">45</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

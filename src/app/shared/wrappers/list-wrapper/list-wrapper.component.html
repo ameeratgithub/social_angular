@@ -1,0 +1,14 @@
+<div fxLayout="row" fxLayoutAlign="center start">
+  <ng-content select="[filters]"></ng-content>
+</div>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      {{title}}
+    </mat-card-title>
+    <mat-card-subtitle *ngIf="subtitle">{{subtitle}}</mat-card-subtitle>
+    <ng-content select="[headerActions]"></ng-content>
+  </mat-card-header>
+  <ng-content select="[content]"></ng-content>
+  
+</mat-card>

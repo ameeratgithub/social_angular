@@ -1,0 +1,11 @@
+<div class="message-box-action" fxLayout="row" fxLayoutAlign="start center">
+  <div fxFlex="80">
+    <input-contenteditable #editable (save)="sendMessage($event)" type="message">
+    </input-contenteditable>
+  </div>
+  <emoji-popover [position]="popoverPosition" arrow="bottom right" (clicked)="editable.appendEmoji(16,$event)">
+  </emoji-popover>
+  <button mat-icon-button disableRipple>
+    <mat-icon>attach_file</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,18 @@
+<mat-card>
+  <div class="mat-card-header" fxLayout="row" fxLayoutAlign="space-between center">
+    <h4 class="no-margin">Announcements</h4>
+    <button mat-icon-button color="t-teal" (click)="openAnnouncementDialog()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <mat-card-content>
+    <div>
+      <component-loader [loading]="loading" [data]="announcements">
+        <ng-template>
+          <announcement-item *ngFor="let a of announcements" [announcement]="a"></announcement-item>
+        </ng-template>
+        <ng-container error>No annoumcement made</ng-container>
+      </component-loader>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,13 @@
+@import "src/assets/scss/components/buttons";
+
+.mat-icon-button {
+  @include icon-button-size(35px, 20px);
+}
+
+.mat-card {
+  margin-bottom: 10px;
+}
+
+.mat-card-content {
+  padding-top: 10px;
+}

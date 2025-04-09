@@ -1,0 +1,33 @@
+.popover-container {
+  width: 300px;
+}
+
+.category-container {
+  padding: 10px;
+  border-bottom: 1px solid rgba($color: #000000, $alpha: .1);
+
+  .category-icon-container {
+    padding: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    &.selected {
+      background-color: rgb(201, 243, 243);
+    }
+  }
+  .emoji {
+    vertical-align: middle;
+  }
+}
+
+.emojis-container {
+  padding: 10px 16px;
+  height: 250px;
+  overflow-y: auto;
+  .emoji-container {
+    cursor: pointer;
+    // margin-left: 16px;
+    // margin-bottom: 5px;
+    // width: 32px;
+    // height: 32px;
+  }
+}

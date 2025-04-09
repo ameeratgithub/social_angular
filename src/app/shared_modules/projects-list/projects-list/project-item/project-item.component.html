@@ -1,0 +1,40 @@
+<div style="margin-top:20px">
+  <div fxLayout="row" fxLayoutAlign="start start">
+    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px" fxFlex="65" fxFlexOffset="10px">
+      <a routerLink="/user/profile/123">
+        <img fxFlex="30px" class="profile-image-avatar" src="assets/images/img-2.jpg">
+      </a>
+      <span fxLayout="column">
+        <a class="mat-link l2" routerLink="/study/projects/1234">This is title of the project</a>
+        <div class="mat-small mat-t-teal">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ullam unde voluptas. Quia explicabo
+          dignissimos voluptatum laborum totam accusamus dolorem enim assumenda rerum delectus modi rem cupiditate,
+          nobis tenetur fugit?
+        </div>
+        <div class="item-actions" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="30px">
+          <div class="mat-t-blue">
+            <button mat-icon-button matTooltip="Rate" (click)="provideReview()">
+              <mat-icon>star</mat-icon>
+            </button>
+            <span>
+              <button mat-icon-button matTooltip="Download">
+                <mat-icon>vertical_align_bottom</mat-icon>
+              </button>
+              <span class="mat-t-teal-l2">45</span>
+            </span>
+          </div>
+          <display-rating [rating]="rating" starCount="5" color="t-orange">
+          </display-rating>
+
+        </div>
+      </span>
+    </div>
+    <mat-chip-list fxFlex>
+      <mat-chip routerLink="/study/projects" [queryParams]="{tag:'CSharp'}">CSharp</mat-chip>
+      <mat-chip routerLink="/study/projects" [queryParams]="{tag:'javascript'}">javascript</mat-chip>
+      <mat-chip routerLink="/study/projects" [queryParams]="{tag:'angular-material'}">Angular Material</mat-chip>
+    </mat-chip-list>
+  </div>
+
+
+</div>

@@ -1,0 +1,19 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item routerLink='/wall'>C Wall</a>
+      <a mat-list-item routerLink='/study/sections/123'>Section</a>
+      <a mat-list-item routerLink="/study/library" >Library</a>
+      <a mat-list-item routerLink="/study/projects" >Projects</a>
+      <a mat-list-item routerLink='/study/universities'>Universities</a>
+      <br />
+      <a mat-list-item routerLink='/blog/questions'>Questions</a>
+      <a mat-list-item routerLink='/blog/questions/ask'>Ask Question</a>
+      <br />
+      <a mat-list-item routerLink='/tags'>Tags</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

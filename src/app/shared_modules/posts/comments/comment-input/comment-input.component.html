@@ -1,0 +1,13 @@
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="7px">
+  <a fxFlex="32px" routerLink="/user/profile/123">
+    <img class="profile-image-avatar" src="assets/images/img-3.jpg" />
+  </a>
+  <div fxFlex="" class="comment-input">
+    <input-contenteditable #editable [initialContent]="tag" (save)="saveComment($event)">
+    </input-contenteditable>
+  </div>
+  <div fxFlex="8">
+    <emoji-popover [position]="popoverPosition" arrow="bottom right" (clicked)="editable.appendEmoji(16,$event)">
+    </emoji-popover>
+  </div>
+</div>

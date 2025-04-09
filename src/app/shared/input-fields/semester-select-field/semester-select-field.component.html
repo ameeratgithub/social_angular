@@ -1,0 +1,12 @@
+<div fxLayoutAlign="start center">
+  <mat-form-field>
+    <mat-label>Semester</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let s of semesters" [value]="s.number">{{s.number}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-icon-button #tooltip="matTooltip" matTooltip="Pick the semester (1st/2nd/3rd etc) for this class"
+    (click)="tooltip.toggle()" color="t-teal-l2">
+    <mat-icon>help_outline</mat-icon>
+  </button>
+</div>

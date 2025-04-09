@@ -1,0 +1,26 @@
+<page-layout-wrapper header="Register Classes" leftFlex="100">
+  <ng-container tree>
+    <mat-card class="mat-elevation-z0" fxLayout="column" fxLayoutGap="30px">
+      <active-registered-classes ></active-registered-classes>
+      <mat-hint>
+        Teaching same course in i.e. 2 sections, are 2 classes. You need to register same course for different sections
+      </mat-hint>
+      <div>
+        <button mat-button color="primary" (click)="addCourse()">
+          Add Class
+        </button>
+      </div>
+      <div class="fields-container" fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="15px">
+        <course-registration-fields fxFlex="23" *ngFor="let c of totalCourses" [number]="c"
+          (removed)="removeClass($event)">
+        </course-registration-fields>
+      </div>
+      <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="end center">
+        <button mat-button (click)="goBack()">
+         &lt; Back</button>
+        <button mat-flat-button color="primary">Save
+        </button>
+      </div>
+    </mat-card>
+  </ng-container>
+</page-layout-wrapper>

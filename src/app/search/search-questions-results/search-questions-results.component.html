@@ -1,0 +1,11 @@
+<page-layout-wrapper >
+  <ng-container header-action>
+    <app-popover [position]="popoverPosition" arrow="top right" icon="tune" close="both">
+      <component-search [searchData]="searchData" width='350' (changed)="handleSearchInput($event)">
+      </component-search>
+    </app-popover>
+  </ng-container>
+  <ng-container content-1>
+    <questions-list></questions-list>
+  </ng-container>
+</page-layout-wrapper>

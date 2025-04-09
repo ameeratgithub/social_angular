@@ -1,0 +1,31 @@
+<page-layout-wrapper header="Section Name">
+  <ng-container header-action>
+    <button mat-icon-button color="t-teal" (click)="openEditSectionDialog()">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </ng-container>
+  <ng-container header-content>
+      <top-students></top-students>
+  </ng-container>
+  <ng-container content-1>
+    <tree-wrapper header="Semesters">
+      <component-loader [loading]="loaderService.loading" [data]="semestersTree">
+        <ng-template>
+          <core-tree [treeData]="semestersTree" inline="true"></core-tree>
+        </ng-template>
+        <ng-container error>No semester found</ng-container>
+      </component-loader>
+    </tree-wrapper>
+  </ng-container>
+  <ng-container content-2>
+    <announcements-list [loading]="loaderService.loading" [announcements]="section?.announcements"></announcements-list>
+  </ng-container>
+  <ng-container right-flex>
+    <div fxLayout="column" fxLayoutGap="10px">
+      <dt-wrapper *ngIf="section?.timetable" title="Timetable" [item]="section.timetable"></dt-wrapper>
+      <dt-wrapper *ngIf="section?.datesheet" title="Datesheet" [item]="section.datesheet"></dt-wrapper>
+    </div>
+  </ng-container>
+</page-layout-wrapper>
+<section-chat class="section-chat-wrapper">
+</section-chat>

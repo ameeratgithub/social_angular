@@ -1,0 +1,24 @@
+.mat-card {
+  padding: 0;
+}
+
+.mat-card-header>div {
+  padding: 10px 10px 0 10px;
+}
+
+::ng-deep .mat-card-header-text {
+  margin: 0 5px !important;
+}
+
+.mat-body{
+  font-weight: 500;
+}
+
+.mat-card-content {
+  padding: 0 5px;
+  height: 180px;
+  overflow: hidden;
+}
+.mat-button{
+  font-size: 12px;
+}

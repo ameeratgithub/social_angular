@@ -1,0 +1,20 @@
+<mat-list-item menuHover #menu="menuHover">
+  <div fxLayout="row" class="flex" fxLayoutAlign="space-between center">
+    <a fxFlex="50" color="primary">{{file.name | truncate:[40] }}</a>
+    <p fxFlex="15">{{file.date | date}}</p>
+    <p fxFlex="15">
+      <mat-error *ngIf="file.deadline" matTooltip="Deadline">{{file.deadline | date}}</mat-error>
+    </p>
+    <a fxFlex="8" color="primary" disableRipple [matTooltip]="file.uploader.fullName">
+      <img fxFlex="60" [src]="file.uploader.image" alt="N/A" />
+    </a>
+    <div fxFlex="4">
+      <menu-wrapper [ngStyle]="{'visibility': menu.showActions?'visible':'hidden'}" (opened)="menu.open()" (closed)="menu.close()"
+      icon="more_horiz" color="t-teal-l2">
+        <button mat-menu-item (click)="updateClicked()">Update</button>
+        <button mat-menu-item>Download</button>
+        <button mat-menu-item (click)="removeClicked()">Remove</button>
+      </menu-wrapper>
+    </div>
+  </div>
+</mat-list-item>

@@ -1,0 +1,19 @@
+<mat-list-item fxLayout="row" fxLayoutAlign="space-around center">
+  <img matListAvatar [src]="university.logo" alt="N/A" />
+  <a class="mat-link" [routerLink]="['/study/universities/'+university.id+'/campuses']" matLine>
+    {{university.name}}<span *ngIf="university.abbreviation"> - {{university.abbreviation}} </span>
+  </a>
+  <p matLine>{{university.location}}</p>
+  <a mat-icon-button color="t-blue" routerLink="/study/projects" [queryParams]="{area:'university',id:university.id}"
+    matTooltip="Projects">
+    <mat-icon>work</mat-icon>
+  </a>
+  <a mat-icon-button color="t-blue" routerLink="/study/library" [queryParams]="{area:'university',id:university.id}"
+    matTooltip="Library">
+    <mat-icon>local_library</mat-icon>
+  </a>
+  <a mat-icon-button color="t-blue" routerLink="/blog/questions" [queryParams]="{area:'university',id:university.id}"
+    matTooltip="Questions">
+    <mat-icon>question_answer</mat-icon>
+  </a>
+</mat-list-item>

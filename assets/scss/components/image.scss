@@ -1,0 +1,49 @@
+@import "./buttons.scss";
+
+.profile-image-avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  user-select: none;
+  &.bordered {
+    padding: 2px;
+    border: 2px solid grey;
+  }
+}
+
+.thumbnail-container {
+  position: relative;
+  background-color: aqua;
+
+  .mat-icon-button {
+    @include icon-button-size(16px, 11px);
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: -5px;
+  }
+
+  .mat-progress-spinner {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+
+    ::ng-deep circle {
+      stroke: white;
+    }
+  }
+}
+
+.image-thumbnail,
+.thumbnail-container {
+  border-radius: 10px;
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+
+.autocomplete-avatar {
+  vertical-align: middle;
+  margin-right: 8px;
+}

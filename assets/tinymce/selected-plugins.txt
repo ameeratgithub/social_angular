@@ -1,0 +1,5 @@
+plugins : "autoresize charmap codesample hr link insertdatetime  lists noneditable preview table textcolor wordcount"
+
+skin: "lightgrey"
+
+theme: "modern"

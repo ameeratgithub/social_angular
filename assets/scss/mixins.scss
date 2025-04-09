@@ -1,0 +1,30 @@
+@mixin square($value) {
+  width: $value;
+  height: $value;
+}
+
+@mixin square-line-height($value) {
+  @include square($value);
+  line-height: $value;
+}
+
+@mixin custom-scrollbar($width) {
+
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgb(212, 205, 205);
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgb(177, 172, 172);
+  }
+}

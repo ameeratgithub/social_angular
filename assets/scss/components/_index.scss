@@ -1,0 +1,44 @@
+@import './image';
+@import './tooltip';
+@import './cards.scss';
+@import './buttons.scss';
+@import './mentions.scss';
+
+@import '../mixins.scss';
+
+.mat-link {
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 15px;
+  outline: none;
+  color: rgba(7, 32, 100, 0.8);
+}
+
+.mat-link:active {
+  color: rgba(7, 32, 100, 0.8);
+}
+
+.modal-header .modal-title {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mat-card-subtitle.big {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.mat-selection-list {
+  outline: none;
+}
+
+.file-item {
+  padding: 10px;
+  margin-top: 2px;
+  border-radius: 5px;
+  background-color: #e3f2fd;
+  .mat-icon-button {
+    @include icon-button-size(20px, 15px)
+  }
+}

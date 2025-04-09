@@ -29,7 +29,7 @@ import { environment } from 'src/environments/environment';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    environment.production ? [] : HttpClientInMemoryWebApiModule.forRoot(MemoryDbService, { delay: 1000 })
+    HttpClientInMemoryWebApiModule.forRoot(MemoryDbService, { delay: 1000 })
   ],
   providers: [
   ],
